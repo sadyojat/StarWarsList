@@ -1,0 +1,20 @@
+query AllVehicles {
+  allVehicles {
+    vehicles {
+      name
+      model
+      passengers
+      vehicleClass
+      maxAtmospheringSpeed
+      manufacturers
+      length
+      id
+      edited
+      crew
+      created
+      costInCredits
+      consumables
+      cargoCapacity
+    }
+  }
+}

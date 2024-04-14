@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E08B1EB2BCB83CD0013397D /* SwapiDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B1EA2BCB83CD0013397D /* SwapiDemoApp.swift */; };
+		1E08B1ED2BCB83CD0013397D /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B1EC2BCB83CD0013397D /* MainTabbedView.swift */; };
+		1E08B1EF2BCB83CE0013397D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E08B1EE2BCB83CE0013397D /* Assets.xcassets */; };
+		1E08B1F22BCB83CE0013397D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E08B1F12BCB83CE0013397D /* Preview Assets.xcassets */; };
+		1E08B1F92BCB860A0013397D /* SwapiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B1F82BCB860A0013397D /* SwapiListView.swift */; };
+		1E08B1FF2BCB9AC30013397D /* SwapiContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B1FE2BCB9AC30013397D /* SwapiContent.swift */; };
+		1E08B2022BCB9E4C0013397D /* RestAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B2012BCB9E4C0013397D /* RestAPICaller.swift */; };
+		1E08B2052BCB9E9C0013397D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B2042BCB9E9C0013397D /* Model.swift */; };
+		1E08B2082BCBAD730013397D /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 1E08B2072BCBAD730013397D /* Apollo */; };
+		1E08B20A2BCBAE140013397D /* swapi.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 1E08B2092BCBAE140013397D /* swapi.graphqls */; };
+		1E08B20F2BCBAEC20013397D /* allpeople.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1E08B20E2BCBAEC20013397D /* allpeople.graphql */; };
+		1E08B2132BCBB1FC0013397D /* AllPeopleQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B2102BCBB1FC0013397D /* AllPeopleQuery.graphql.swift */; };
+		1EDAAA4F2BCC85F5008CC0D9 /* GQLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA4E2BCC85F5008CC0D9 /* GQLClient.swift */; };
+		1EDAAA512BCC93C1008CC0D9 /* allvehicles.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA502BCC93C1008CC0D9 /* allvehicles.graphql */; };
+		1EDAAA532BCC94A4008CC0D9 /* allStarships.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA522BCC94A4008CC0D9 /* allStarships.graphql */; };
+		1EDAAA552BCC94EF008CC0D9 /* allfilms.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA542BCC94EF008CC0D9 /* allfilms.graphql */; };
+		1EDAAA572BCC953B008CC0D9 /* allplanets.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA562BCC953B008CC0D9 /* allplanets.graphql */; };
+		1EDAAA592BCC9554008CC0D9 /* allspecies.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA582BCC9554008CC0D9 /* allspecies.graphql */; };
+		1EDAAA5B2BCC96C3008CC0D9 /* GraphQL.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA5A2BCC96C3008CC0D9 /* GraphQL.graphql.swift */; };
+		1EDAAA612BCC96CE008CC0D9 /* AllSpeciesQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA5C2BCC96CE008CC0D9 /* AllSpeciesQuery.graphql.swift */; };
+		1EDAAA622BCC96CE008CC0D9 /* AllFilmsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA5D2BCC96CE008CC0D9 /* AllFilmsQuery.graphql.swift */; };
+		1EDAAA632BCC96CE008CC0D9 /* AllStarshipsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA5E2BCC96CE008CC0D9 /* AllStarshipsQuery.graphql.swift */; };
+		1EDAAA642BCC96CE008CC0D9 /* AllVehiclesQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA5F2BCC96CE008CC0D9 /* AllVehiclesQuery.graphql.swift */; };
+		1EDAAA652BCC96CE008CC0D9 /* AllPlanetsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA602BCC96CE008CC0D9 /* AllPlanetsQuery.graphql.swift */; };
+		1EDAAA8A2BCC98A4008CC0D9 /* allfilms.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA662BCC98A4008CC0D9 /* allfilms.graphql */; };
+		1EDAAA8B2BCC98A4008CC0D9 /* allpeople.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA672BCC98A4008CC0D9 /* allpeople.graphql */; };
+		1EDAAA8C2BCC98A4008CC0D9 /* allplanets.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA682BCC98A4008CC0D9 /* allplanets.graphql */; };
+		1EDAAA8D2BCC98A4008CC0D9 /* allspecies.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA692BCC98A4008CC0D9 /* allspecies.graphql */; };
+		1EDAAA8E2BCC98A4008CC0D9 /* allStarships.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA6A2BCC98A4008CC0D9 /* allStarships.graphql */; };
+		1EDAAA8F2BCC98A4008CC0D9 /* allvehicles.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA6B2BCC98A4008CC0D9 /* allvehicles.graphql */; };
+		1EDAAA902BCC98A4008CC0D9 /* AllFilmsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA6D2BCC98A4008CC0D9 /* AllFilmsQuery.graphql.swift */; };
+		1EDAAA912BCC98A4008CC0D9 /* AllPeopleQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA6E2BCC98A4008CC0D9 /* AllPeopleQuery.graphql.swift */; };
+		1EDAAA922BCC98A4008CC0D9 /* AllPlanetsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA6F2BCC98A4008CC0D9 /* AllPlanetsQuery.graphql.swift */; };
+		1EDAAA932BCC98A4008CC0D9 /* AllSpeciesQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA702BCC98A4008CC0D9 /* AllSpeciesQuery.graphql.swift */; };
+		1EDAAA942BCC98A4008CC0D9 /* AllStarshipsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA712BCC98A4008CC0D9 /* AllStarshipsQuery.graphql.swift */; };
+		1EDAAA952BCC98A4008CC0D9 /* AllVehiclesQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA722BCC98A4008CC0D9 /* AllVehiclesQuery.graphql.swift */; };
+		1EDAAA962BCC98A4008CC0D9 /* Node.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA752BCC98A4008CC0D9 /* Node.graphql.swift */; };
+		1EDAAA972BCC98A4008CC0D9 /* Film.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA772BCC98A4008CC0D9 /* Film.graphql.swift */; };
+		1EDAAA982BCC98A4008CC0D9 /* FilmsConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA782BCC98A4008CC0D9 /* FilmsConnection.graphql.swift */; };
+		1EDAAA992BCC98A4008CC0D9 /* PeopleConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA792BCC98A4008CC0D9 /* PeopleConnection.graphql.swift */; };
+		1EDAAA9A2BCC98A4008CC0D9 /* Person.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA7A2BCC98A4008CC0D9 /* Person.graphql.swift */; };
+		1EDAAA9B2BCC98A4008CC0D9 /* PersonFilmsConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA7B2BCC98A4008CC0D9 /* PersonFilmsConnection.graphql.swift */; };
+		1EDAAA9C2BCC98A4008CC0D9 /* Planet.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA7C2BCC98A4008CC0D9 /* Planet.graphql.swift */; };
+		1EDAAA9D2BCC98A4008CC0D9 /* PlanetsConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA7D2BCC98A4008CC0D9 /* PlanetsConnection.graphql.swift */; };
+		1EDAAA9E2BCC98A4008CC0D9 /* Root.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA7E2BCC98A4008CC0D9 /* Root.graphql.swift */; };
+		1EDAAA9F2BCC98A4008CC0D9 /* Species.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA7F2BCC98A4008CC0D9 /* Species.graphql.swift */; };
+		1EDAAAA02BCC98A4008CC0D9 /* SpeciesConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA802BCC98A4008CC0D9 /* SpeciesConnection.graphql.swift */; };
+		1EDAAAA12BCC98A4008CC0D9 /* Starship.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA812BCC98A4008CC0D9 /* Starship.graphql.swift */; };
+		1EDAAAA22BCC98A4008CC0D9 /* StarshipsConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA822BCC98A4008CC0D9 /* StarshipsConnection.graphql.swift */; };
+		1EDAAAA32BCC98A4008CC0D9 /* Vehicle.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA832BCC98A4008CC0D9 /* Vehicle.graphql.swift */; };
+		1EDAAAA42BCC98A4008CC0D9 /* VehiclesConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA842BCC98A4008CC0D9 /* VehiclesConnection.graphql.swift */; };
+		1EDAAAA52BCC98A4008CC0D9 /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA862BCC98A4008CC0D9 /* SchemaConfiguration.swift */; };
+		1EDAAAA62BCC98A4008CC0D9 /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA872BCC98A4008CC0D9 /* SchemaMetadata.graphql.swift */; };
+		1EDAAAA72BCC98A4008CC0D9 /* swapi.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA882BCC98A4008CC0D9 /* swapi.graphqls */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E08B1E72BCB83CD0013397D /* SwapiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwapiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E08B1EA2BCB83CD0013397D /* SwapiDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiDemoApp.swift; sourceTree = "<group>"; };
+		1E08B1EC2BCB83CD0013397D /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
+		1E08B1EE2BCB83CE0013397D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E08B1F12BCB83CE0013397D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1E08B1F82BCB860A0013397D /* SwapiListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiListView.swift; sourceTree = "<group>"; };
+		1E08B1FE2BCB9AC30013397D /* SwapiContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiContent.swift; sourceTree = "<group>"; };
+		1E08B2012BCB9E4C0013397D /* RestAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPICaller.swift; sourceTree = "<group>"; };
+		1E08B2042BCB9E9C0013397D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1E08B2092BCBAE140013397D /* swapi.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swapi.graphqls; sourceTree = "<group>"; };
+		1E08B20E2BCBAEC20013397D /* allpeople.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = allpeople.graphql; sourceTree = "<group>"; };
+		1E08B2102BCBB1FC0013397D /* AllPeopleQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPeopleQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA4D2BCC5548008CC0D9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1EDAAA4E2BCC85F5008CC0D9 /* GQLClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLClient.swift; sourceTree = "<group>"; };
+		1EDAAA502BCC93C1008CC0D9 /* allvehicles.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = allvehicles.graphql; sourceTree = "<group>"; };
+		1EDAAA522BCC94A4008CC0D9 /* allStarships.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = allStarships.graphql; sourceTree = "<group>"; };
+		1EDAAA542BCC94EF008CC0D9 /* allfilms.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = allfilms.graphql; sourceTree = "<group>"; };
+		1EDAAA562BCC953B008CC0D9 /* allplanets.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = allplanets.graphql; sourceTree = "<group>"; };
+		1EDAAA582BCC9554008CC0D9 /* allspecies.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = allspecies.graphql; sourceTree = "<group>"; };
+		1EDAAA5A2BCC96C3008CC0D9 /* GraphQL.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQL.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA5C2BCC96CE008CC0D9 /* AllSpeciesQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllSpeciesQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA5D2BCC96CE008CC0D9 /* AllFilmsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllFilmsQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA5E2BCC96CE008CC0D9 /* AllStarshipsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllStarshipsQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA5F2BCC96CE008CC0D9 /* AllVehiclesQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllVehiclesQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA602BCC96CE008CC0D9 /* AllPlanetsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPlanetsQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA662BCC98A4008CC0D9 /* allfilms.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = allfilms.graphql; sourceTree = "<group>"; };
+		1EDAAA672BCC98A4008CC0D9 /* allpeople.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = allpeople.graphql; sourceTree = "<group>"; };
+		1EDAAA682BCC98A4008CC0D9 /* allplanets.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = allplanets.graphql; sourceTree = "<group>"; };
+		1EDAAA692BCC98A4008CC0D9 /* allspecies.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = allspecies.graphql; sourceTree = "<group>"; };
+		1EDAAA6A2BCC98A4008CC0D9 /* allStarships.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = allStarships.graphql; sourceTree = "<group>"; };
+		1EDAAA6B2BCC98A4008CC0D9 /* allvehicles.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = allvehicles.graphql; sourceTree = "<group>"; };
+		1EDAAA6D2BCC98A4008CC0D9 /* AllFilmsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllFilmsQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA6E2BCC98A4008CC0D9 /* AllPeopleQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPeopleQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA6F2BCC98A4008CC0D9 /* AllPlanetsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPlanetsQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA702BCC98A4008CC0D9 /* AllSpeciesQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllSpeciesQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA712BCC98A4008CC0D9 /* AllStarshipsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllStarshipsQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA722BCC98A4008CC0D9 /* AllVehiclesQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllVehiclesQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA752BCC98A4008CC0D9 /* Node.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA772BCC98A4008CC0D9 /* Film.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA782BCC98A4008CC0D9 /* FilmsConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsConnection.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA792BCC98A4008CC0D9 /* PeopleConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleConnection.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA7A2BCC98A4008CC0D9 /* Person.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA7B2BCC98A4008CC0D9 /* PersonFilmsConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonFilmsConnection.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA7C2BCC98A4008CC0D9 /* Planet.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA7D2BCC98A4008CC0D9 /* PlanetsConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsConnection.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA7E2BCC98A4008CC0D9 /* Root.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Root.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA7F2BCC98A4008CC0D9 /* Species.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Species.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA802BCC98A4008CC0D9 /* SpeciesConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeciesConnection.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA812BCC98A4008CC0D9 /* Starship.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starship.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA822BCC98A4008CC0D9 /* StarshipsConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsConnection.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA832BCC98A4008CC0D9 /* Vehicle.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA842BCC98A4008CC0D9 /* VehiclesConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesConnection.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA862BCC98A4008CC0D9 /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
+		1EDAAA872BCC98A4008CC0D9 /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
+		1EDAAA882BCC98A4008CC0D9 /* swapi.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swapi.graphqls; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E08B1E42BCB83CD0013397D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E08B2082BCBAD730013397D /* Apollo in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E08B1DE2BCB83CD0013397D = {
+			isa = PBXGroup;
+			children = (
+				1EDAAA4D2BCC5548008CC0D9 /* README.md */,
+				1E08B20B2BCBAE210013397D /* GraphQL */,
+				1E08B1E92BCB83CD0013397D /* SwapiDemo */,
+				1E08B1E82BCB83CD0013397D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E08B1E82BCB83CD0013397D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E08B1E72BCB83CD0013397D /* SwapiDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E08B1E92BCB83CD0013397D /* SwapiDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1E08B2032BCB9E6D0013397D /* Model */,
+				1E08B2002BCB9E170013397D /* RestAPI */,
+				1E08B1FD2BCB9AB20013397D /* MetaData */,
+				1E08B1FC2BCB861B0013397D /* Tabs */,
+				1E08B1EA2BCB83CD0013397D /* SwapiDemoApp.swift */,
+				1E08B1EC2BCB83CD0013397D /* MainTabbedView.swift */,
+				1E08B1EE2BCB83CE0013397D /* Assets.xcassets */,
+				1E08B1F02BCB83CE0013397D /* Preview Content */,
+			);
+			path = SwapiDemo;
+			sourceTree = "<group>";
+		};
+		1E08B1F02BCB83CE0013397D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1E08B1F12BCB83CE0013397D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1E08B1FC2BCB861B0013397D /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				1E08B1F82BCB860A0013397D /* SwapiListView.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		1E08B1FD2BCB9AB20013397D /* MetaData */ = {
+			isa = PBXGroup;
+			children = (
+				1E08B1FE2BCB9AC30013397D /* SwapiContent.swift */,
+			);
+			path = MetaData;
+			sourceTree = "<group>";
+		};
+		1E08B2002BCB9E170013397D /* RestAPI */ = {
+			isa = PBXGroup;
+			children = (
+				1E08B2012BCB9E4C0013397D /* RestAPICaller.swift */,
+			);
+			path = RestAPI;
+			sourceTree = "<group>";
+		};
+		1E08B2032BCB9E6D0013397D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E08B2042BCB9E9C0013397D /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1E08B20B2BCBAE210013397D /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAAA742BCC98A4008CC0D9 /* Operations */,
+				1EDAAA6C2BCC98A4008CC0D9 /* queries */,
+				1EDAAA892BCC98A4008CC0D9 /* schema */,
+				1EDAAA5A2BCC96C3008CC0D9 /* GraphQL.graphql.swift */,
+				1E08B2122BCBB1FC0013397D /* Operations */,
+				1EDAAA4E2BCC85F5008CC0D9 /* GQLClient.swift */,
+				1E08B20D2BCBAEA40013397D /* queries */,
+				1E08B20C2BCBAE2B0013397D /* schema */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		1E08B20C2BCBAE2B0013397D /* schema */ = {
+			isa = PBXGroup;
+			children = (
+				1E08B2092BCBAE140013397D /* swapi.graphqls */,
+			);
+			path = schema;
+			sourceTree = "<group>";
+		};
+		1E08B20D2BCBAEA40013397D /* queries */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAAA542BCC94EF008CC0D9 /* allfilms.graphql */,
+				1E08B20E2BCBAEC20013397D /* allpeople.graphql */,
+				1EDAAA562BCC953B008CC0D9 /* allplanets.graphql */,
+				1EDAAA582BCC9554008CC0D9 /* allspecies.graphql */,
+				1EDAAA522BCC94A4008CC0D9 /* allStarships.graphql */,
+				1EDAAA502BCC93C1008CC0D9 /* allvehicles.graphql */,
+			);
+			path = queries;
+			sourceTree = "<group>";
+		};
+		1E08B2112BCBB1FC0013397D /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAAA5D2BCC96CE008CC0D9 /* AllFilmsQuery.graphql.swift */,
+				1EDAAA602BCC96CE008CC0D9 /* AllPlanetsQuery.graphql.swift */,
+				1EDAAA5C2BCC96CE008CC0D9 /* AllSpeciesQuery.graphql.swift */,
+				1EDAAA5E2BCC96CE008CC0D9 /* AllStarshipsQuery.graphql.swift */,
+				1EDAAA5F2BCC96CE008CC0D9 /* AllVehiclesQuery.graphql.swift */,
+				1E08B2102BCBB1FC0013397D /* AllPeopleQuery.graphql.swift */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		1E08B2122BCBB1FC0013397D /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				1E08B2112BCBB1FC0013397D /* Queries */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		1EDAAA6C2BCC98A4008CC0D9 /* queries */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAAA662BCC98A4008CC0D9 /* allfilms.graphql */,
+				1EDAAA672BCC98A4008CC0D9 /* allpeople.graphql */,
+				1EDAAA682BCC98A4008CC0D9 /* allplanets.graphql */,
+				1EDAAA692BCC98A4008CC0D9 /* allspecies.graphql */,
+				1EDAAA6A2BCC98A4008CC0D9 /* allStarships.graphql */,
+				1EDAAA6B2BCC98A4008CC0D9 /* allvehicles.graphql */,
+			);
+			path = queries;
+			sourceTree = "<group>";
+		};
+		1EDAAA732BCC98A4008CC0D9 /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAAA6D2BCC98A4008CC0D9 /* AllFilmsQuery.graphql.swift */,
+				1EDAAA6E2BCC98A4008CC0D9 /* AllPeopleQuery.graphql.swift */,
+				1EDAAA6F2BCC98A4008CC0D9 /* AllPlanetsQuery.graphql.swift */,
+				1EDAAA702BCC98A4008CC0D9 /* AllSpeciesQuery.graphql.swift */,
+				1EDAAA712BCC98A4008CC0D9 /* AllStarshipsQuery.graphql.swift */,
+				1EDAAA722BCC98A4008CC0D9 /* AllVehiclesQuery.graphql.swift */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		1EDAAA742BCC98A4008CC0D9 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAAA732BCC98A4008CC0D9 /* Queries */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		1EDAAA762BCC98A4008CC0D9 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAAA752BCC98A4008CC0D9 /* Node.graphql.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		1EDAAA852BCC98A4008CC0D9 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAAA772BCC98A4008CC0D9 /* Film.graphql.swift */,
+				1EDAAA782BCC98A4008CC0D9 /* FilmsConnection.graphql.swift */,
+				1EDAAA792BCC98A4008CC0D9 /* PeopleConnection.graphql.swift */,
+				1EDAAA7A2BCC98A4008CC0D9 /* Person.graphql.swift */,
+				1EDAAA7B2BCC98A4008CC0D9 /* PersonFilmsConnection.graphql.swift */,
+				1EDAAA7C2BCC98A4008CC0D9 /* Planet.graphql.swift */,
+				1EDAAA7D2BCC98A4008CC0D9 /* PlanetsConnection.graphql.swift */,
+				1EDAAA7E2BCC98A4008CC0D9 /* Root.graphql.swift */,
+				1EDAAA7F2BCC98A4008CC0D9 /* Species.graphql.swift */,
+				1EDAAA802BCC98A4008CC0D9 /* SpeciesConnection.graphql.swift */,
+				1EDAAA812BCC98A4008CC0D9 /* Starship.graphql.swift */,
+				1EDAAA822BCC98A4008CC0D9 /* StarshipsConnection.graphql.swift */,
+				1EDAAA832BCC98A4008CC0D9 /* Vehicle.graphql.swift */,
+				1EDAAA842BCC98A4008CC0D9 /* VehiclesConnection.graphql.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		1EDAAA892BCC98A4008CC0D9 /* schema */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAAA762BCC98A4008CC0D9 /* Interfaces */,
+				1EDAAA852BCC98A4008CC0D9 /* Objects */,
+				1EDAAA862BCC98A4008CC0D9 /* SchemaConfiguration.swift */,
+				1EDAAA872BCC98A4008CC0D9 /* SchemaMetadata.graphql.swift */,
+				1EDAAA882BCC98A4008CC0D9 /* swapi.graphqls */,
+			);
+			path = schema;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E08B1E62BCB83CD0013397D /* SwapiDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E08B1F52BCB83CE0013397D /* Build configuration list for PBXNativeTarget "SwapiDemo" */;
+			buildPhases = (
+				1E08B1E32BCB83CD0013397D /* Sources */,
+				1E08B1E42BCB83CD0013397D /* Frameworks */,
+				1E08B1E52BCB83CD0013397D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwapiDemo;
+			packageProductDependencies = (
+				1E08B2072BCBAD730013397D /* Apollo */,
+			);
+			productName = SwapiDemo;
+			productReference = 1E08B1E72BCB83CD0013397D /* SwapiDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E08B1DF2BCB83CD0013397D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					1E08B1E62BCB83CD0013397D = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 1E08B1E22BCB83CD0013397D /* Build configuration list for PBXProject "SwapiDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E08B1DE2BCB83CD0013397D;
+			packageReferences = (
+				1E08B2062BCBAD730013397D /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
+			productRefGroup = 1E08B1E82BCB83CD0013397D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E08B1E62BCB83CD0013397D /* SwapiDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E08B1E52BCB83CD0013397D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E08B20F2BCBAEC20013397D /* allpeople.graphql in Resources */,
+				1EDAAA8B2BCC98A4008CC0D9 /* allpeople.graphql in Resources */,
+				1EDAAAA72BCC98A4008CC0D9 /* swapi.graphqls in Resources */,
+				1EDAAA552BCC94EF008CC0D9 /* allfilms.graphql in Resources */,
+				1EDAAA8C2BCC98A4008CC0D9 /* allplanets.graphql in Resources */,
+				1EDAAA8F2BCC98A4008CC0D9 /* allvehicles.graphql in Resources */,
+				1E08B1F22BCB83CE0013397D /* Preview Assets.xcassets in Resources */,
+				1EDAAA8E2BCC98A4008CC0D9 /* allStarships.graphql in Resources */,
+				1E08B1EF2BCB83CE0013397D /* Assets.xcassets in Resources */,
+				1EDAAA532BCC94A4008CC0D9 /* allStarships.graphql in Resources */,
+				1EDAAA8D2BCC98A4008CC0D9 /* allspecies.graphql in Resources */,
+				1E08B20A2BCBAE140013397D /* swapi.graphqls in Resources */,
+				1EDAAA512BCC93C1008CC0D9 /* allvehicles.graphql in Resources */,
+				1EDAAA8A2BCC98A4008CC0D9 /* allfilms.graphql in Resources */,
+				1EDAAA572BCC953B008CC0D9 /* allplanets.graphql in Resources */,
+				1EDAAA592BCC9554008CC0D9 /* allspecies.graphql in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E08B1E32BCB83CD0013397D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EDAAA9B2BCC98A4008CC0D9 /* PersonFilmsConnection.graphql.swift in Sources */,
+				1EDAAA4F2BCC85F5008CC0D9 /* GQLClient.swift in Sources */,
+				1EDAAAA32BCC98A4008CC0D9 /* Vehicle.graphql.swift in Sources */,
+				1EDAAAA52BCC98A4008CC0D9 /* SchemaConfiguration.swift in Sources */,
+				1EDAAA922BCC98A4008CC0D9 /* AllPlanetsQuery.graphql.swift in Sources */,
+				1E08B2132BCBB1FC0013397D /* AllPeopleQuery.graphql.swift in Sources */,
+				1EDAAA9C2BCC98A4008CC0D9 /* Planet.graphql.swift in Sources */,
+				1EDAAA9F2BCC98A4008CC0D9 /* Species.graphql.swift in Sources */,
+				1EDAAA942BCC98A4008CC0D9 /* AllStarshipsQuery.graphql.swift in Sources */,
+				1EDAAA622BCC96CE008CC0D9 /* AllFilmsQuery.graphql.swift in Sources */,
+				1EDAAA642BCC96CE008CC0D9 /* AllVehiclesQuery.graphql.swift in Sources */,
+				1E08B1F92BCB860A0013397D /* SwapiListView.swift in Sources */,
+				1EDAAA932BCC98A4008CC0D9 /* AllSpeciesQuery.graphql.swift in Sources */,
+				1EDAAA972BCC98A4008CC0D9 /* Film.graphql.swift in Sources */,
+				1EDAAA632BCC96CE008CC0D9 /* AllStarshipsQuery.graphql.swift in Sources */,
+				1EDAAAA42BCC98A4008CC0D9 /* VehiclesConnection.graphql.swift in Sources */,
+				1EDAAA612BCC96CE008CC0D9 /* AllSpeciesQuery.graphql.swift in Sources */,
+				1E08B1FF2BCB9AC30013397D /* SwapiContent.swift in Sources */,
+				1EDAAA9E2BCC98A4008CC0D9 /* Root.graphql.swift in Sources */,
+				1EDAAA5B2BCC96C3008CC0D9 /* GraphQL.graphql.swift in Sources */,
+				1EDAAAA62BCC98A4008CC0D9 /* SchemaMetadata.graphql.swift in Sources */,
+				1E08B1ED2BCB83CD0013397D /* MainTabbedView.swift in Sources */,
+				1EDAAA992BCC98A4008CC0D9 /* PeopleConnection.graphql.swift in Sources */,
+				1EDAAAA02BCC98A4008CC0D9 /* SpeciesConnection.graphql.swift in Sources */,
+				1EDAAA9D2BCC98A4008CC0D9 /* PlanetsConnection.graphql.swift in Sources */,
+				1E08B2052BCB9E9C0013397D /* Model.swift in Sources */,
+				1EDAAAA12BCC98A4008CC0D9 /* Starship.graphql.swift in Sources */,
+				1EDAAA952BCC98A4008CC0D9 /* AllVehiclesQuery.graphql.swift in Sources */,
+				1EDAAA9A2BCC98A4008CC0D9 /* Person.graphql.swift in Sources */,
+				1EDAAA982BCC98A4008CC0D9 /* FilmsConnection.graphql.swift in Sources */,
+				1EDAAA912BCC98A4008CC0D9 /* AllPeopleQuery.graphql.swift in Sources */,
+				1E08B2022BCB9E4C0013397D /* RestAPICaller.swift in Sources */,
+				1EDAAAA22BCC98A4008CC0D9 /* StarshipsConnection.graphql.swift in Sources */,
+				1EDAAA652BCC96CE008CC0D9 /* AllPlanetsQuery.graphql.swift in Sources */,
+				1EDAAA902BCC98A4008CC0D9 /* AllFilmsQuery.graphql.swift in Sources */,
+				1E08B1EB2BCB83CD0013397D /* SwapiDemoApp.swift in Sources */,
+				1EDAAA962BCC98A4008CC0D9 /* Node.graphql.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1E08B1F32BCB83CE0013397D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E08B1F42BCB83CE0013397D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E08B1F62BCB83CE0013397D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwapiDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 2UNMMBBBM3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alokirde.app.SwapiDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E08B1F72BCB83CE0013397D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwapiDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 2UNMMBBBM3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alokirde.app.SwapiDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E08B1E22BCB83CD0013397D /* Build configuration list for PBXProject "SwapiDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E08B1F32BCB83CE0013397D /* Debug */,
+				1E08B1F42BCB83CE0013397D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E08B1F52BCB83CE0013397D /* Build configuration list for PBXNativeTarget "SwapiDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E08B1F62BCB83CE0013397D /* Debug */,
+				1E08B1F72BCB83CE0013397D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1E08B2062BCBAD730013397D /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1E08B2072BCBAD730013397D /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E08B2062BCBAD730013397D /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1E08B1DF2BCB83CD0013397D /* Project object */;
+}

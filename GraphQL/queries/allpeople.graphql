@@ -1,0 +1,16 @@
+query AllPeople {
+  allPeople {
+    people {
+      name
+      birthYear
+      eyeColor
+      gender
+      hairColor
+      filmConnection {
+        films {
+          title
+        }
+      }
+    }
+  }
+}

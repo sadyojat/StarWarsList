@@ -1,0 +1,18 @@
+query AllStarships {
+  allStarships {
+    starships {
+      id
+      length
+      model
+      name
+      passengers
+      starshipClass
+      hyperdriveRating
+      crew
+      created
+      costInCredits
+      consumables
+      cargoCapacity
+    }
+  }
+}
