@@ -16,7 +16,7 @@ class GQLClient {
     private let client = ApolloClient(url: URL(string: "https://swapi-graphql.netlify.app/.netlify/functions/index")!)
     
     func fetchAllPeople(_ completion: GQLListCompletion? = nil ) {
-        client.fetch(query: GraphQL.AllPeopleQuery()) { result in
+        client.fetch(query: GraphQL.AllPeopleQuery(first: nil, last: nil, before: nil, after: nil)) { result in
             do {
                 guard let data = try result.get().data else { return }
                 if let people = data.allPeople?.people as? [GraphQL.AllPeopleQuery.Data.AllPeople.Person] {

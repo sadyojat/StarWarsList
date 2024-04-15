@@ -1,5 +1,5 @@
-query AllPeople {
-  allPeople {
+query AllPeople($first: Int, $last: Int, $before: String, $after: String) {
+  allPeople(first: $first, last: $last, before: $before, after: $after) {
     people {
       id
       name
@@ -13,5 +13,12 @@ query AllPeople {
         }
       }
     }
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+    }
+    totalCount
   }
 }

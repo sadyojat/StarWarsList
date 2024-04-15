@@ -40,6 +40,7 @@ extension GraphQL {
       case "Starship": return GraphQL.Objects.Starship
       case "Vehicle": return GraphQL.Objects.Vehicle
       case "PersonFilmsConnection": return GraphQL.Objects.PersonFilmsConnection
+      case "PageInfo": return GraphQL.Objects.PageInfo
       case "SpeciesConnection": return GraphQL.Objects.SpeciesConnection
       case "VehiclesConnection": return GraphQL.Objects.VehiclesConnection
       case "StarshipsConnection": return GraphQL.Objects.StarshipsConnection

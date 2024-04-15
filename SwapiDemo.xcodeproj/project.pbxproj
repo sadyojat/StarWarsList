@@ -63,6 +63,7 @@
 		1EDAAAA72BCC98A4008CC0D9 /* swapi.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA882BCC98A4008CC0D9 /* swapi.graphqls */; };
 		1EDAAAA92BCCE07F008CC0D9 /* planetdetail.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAAA82BCCE07F008CC0D9 /* planetdetail.graphql */; };
 		1EDAAAAB2BCCE0C7008CC0D9 /* PlanetDetailQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAAAA2BCCE0C7008CC0D9 /* PlanetDetailQuery.graphql.swift */; };
+		1EDAAAAD2BCCE92B008CC0D9 /* PageInfo.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAAAC2BCCE92B008CC0D9 /* PageInfo.graphql.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,7 @@
 		1EDAAA882BCC98A4008CC0D9 /* swapi.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swapi.graphqls; sourceTree = "<group>"; };
 		1EDAAAA82BCCE07F008CC0D9 /* planetdetail.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = planetdetail.graphql; sourceTree = "<group>"; };
 		1EDAAAAA2BCCE0C7008CC0D9 /* PlanetDetailQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetDetailQuery.graphql.swift; sourceTree = "<group>"; };
+		1EDAAAAC2BCCE92B008CC0D9 /* PageInfo.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageInfo.graphql.swift; path = schema/Objects/PageInfo.graphql.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 		1E08B20B2BCBAE210013397D /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
+				1EDAAAAC2BCCE92B008CC0D9 /* PageInfo.graphql.swift */,
 				1EDAAA742BCC98A4008CC0D9 /* Operations */,
 				1EDAAA6C2BCC98A4008CC0D9 /* queries */,
 				1EDAAA892BCC98A4008CC0D9 /* schema */,
@@ -436,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EDAAA9B2BCC98A4008CC0D9 /* PersonFilmsConnection.graphql.swift in Sources */,
+				1EDAAAAD2BCCE92B008CC0D9 /* PageInfo.graphql.swift in Sources */,
 				1EDAAA4F2BCC85F5008CC0D9 /* GQLClient.swift in Sources */,
 				1EDAAAA32BCC98A4008CC0D9 /* Vehicle.graphql.swift in Sources */,
 				1EDAAAA52BCC98A4008CC0D9 /* SchemaConfiguration.swift in Sources */,
