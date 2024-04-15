@@ -65,6 +65,7 @@
 		1EDAAAAB2BCCE0C7008CC0D9 /* PlanetDetailQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAAAA2BCCE0C7008CC0D9 /* PlanetDetailQuery.graphql.swift */; };
 		1EDAAAAD2BCCE92B008CC0D9 /* PageInfo.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAAAC2BCCE92B008CC0D9 /* PageInfo.graphql.swift */; };
 		1EDAAAAF2BCCF0B2008CC0D9 /* SwapiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAAAE2BCCF0B2008CC0D9 /* SwapiViewModel.swift */; };
+		1EEAAD322BCCF7D500E1052D /* GraphQL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAAD312BCCF7D500E1052D /* GraphQL+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +128,7 @@
 		1EDAAAAA2BCCE0C7008CC0D9 /* PlanetDetailQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetDetailQuery.graphql.swift; sourceTree = "<group>"; };
 		1EDAAAAC2BCCE92B008CC0D9 /* PageInfo.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageInfo.graphql.swift; path = schema/Objects/PageInfo.graphql.swift; sourceTree = "<group>"; };
 		1EDAAAAE2BCCF0B2008CC0D9 /* SwapiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiViewModel.swift; sourceTree = "<group>"; };
+		1EEAAD312BCCF7D500E1052D /* GraphQL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GraphQL+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,11 +220,12 @@
 		1E08B20B2BCBAE210013397D /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
+				1EDAAA5A2BCC96C3008CC0D9 /* GraphQL.graphql.swift */,
+				1EEAAD312BCCF7D500E1052D /* GraphQL+Extensions.swift */,
 				1EDAAAAC2BCCE92B008CC0D9 /* PageInfo.graphql.swift */,
 				1EDAAA742BCC98A4008CC0D9 /* Operations */,
 				1EDAAA6C2BCC98A4008CC0D9 /* queries */,
 				1EDAAA892BCC98A4008CC0D9 /* schema */,
-				1EDAAA5A2BCC96C3008CC0D9 /* GraphQL.graphql.swift */,
 				1E08B2122BCBB1FC0013397D /* Operations */,
 				1EDAAA4E2BCC85F5008CC0D9 /* GQLClient.swift */,
 				1E08B20D2BCBAEA40013397D /* queries */,
@@ -476,6 +479,7 @@
 				1EDAAA912BCC98A4008CC0D9 /* AllPeopleQuery.graphql.swift in Sources */,
 				1E08B2022BCB9E4C0013397D /* RestAPICaller.swift in Sources */,
 				1EDAAAA22BCC98A4008CC0D9 /* StarshipsConnection.graphql.swift in Sources */,
+				1EEAAD322BCCF7D500E1052D /* GraphQL+Extensions.swift in Sources */,
 				1EDAAA652BCC96CE008CC0D9 /* AllPlanetsQuery.graphql.swift in Sources */,
 				1EDAAA902BCC98A4008CC0D9 /* AllFilmsQuery.graphql.swift in Sources */,
 				1E08B1EB2BCB83CD0013397D /* SwapiDemoApp.swift in Sources */,

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SwapiListView: View {
     
-    @StateObject var viewModel: SwapiViewModel
+    @StateObject private var viewModel: SwapiViewModel
         
     
     init(sourceType: RemoteSourceType = .rest) {
@@ -22,7 +22,7 @@ struct SwapiListView: View {
         NavigationStack {
             VStack {
                 Picker("Learn More about Star Wars", selection: $viewModel.selectedContent) {
-                    ForEach(SwapiContent.allCases, id: \.self) { selection in
+                    ForEach(SwapiContent.allCases, id: \.self) { selection in                        
                         Text(selection.title)
                     }
                 }

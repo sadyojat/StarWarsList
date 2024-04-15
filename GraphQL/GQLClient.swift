@@ -10,18 +10,24 @@ import Apollo
 
 typealias GQLListCompletion = (([String]) -> Void)
 
+struct AllQueryHeader {
+    var first: GraphQLNullable<Int> = nil
+    var last: GraphQLNullable<Int> = nil
+    var before: GraphQLNullable<String> = nil
+    var after: GraphQLNullable<String> = nil
+}
+
 class GQLClient {
     static let shared = GQLClient()
     private init() {}
     private let client = ApolloClient(url: URL(string: "https://swapi-graphql.netlify.app/.netlify/functions/index")!)
     
-    func fetchAllPeople(_ completion: GQLListCompletion? = nil ) {
-        client.fetch(query: GraphQL.AllPeopleQuery(first: nil, last: nil, before: nil, after: nil)) { result in
+    func fetchAllPeople(_ h: AllQueryHeader = AllQueryHeader(), _ completion: ((GraphQL.AllPeople?) -> Void)? = nil ) {
+        client.fetch(query: GraphQL.AllPeopleQuery(first: h.first, last: h.last,
+                                                   before: h.before, after: h.after)) { result in
             do {
                 guard let data = try result.get().data else { return }
-                if let people = data.allPeople?.people as? [GraphQL.AllPeopleQuery.Data.AllPeople.Person] {
-                    completion?(people.compactMap { $0.name ?? nil })
-                }
+                completion?(data.allPeople)
             } catch {
                 print(error)
             }
