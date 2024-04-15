@@ -41,7 +41,27 @@ struct SwapiListView: View {
                     }
                 }
             }
-            List { ForEach(listContent, id: \.self) { Text($0) } }
+            List {
+                Section {
+                    ForEach(listContent, id: \.self) { Text($0) }
+                } footer: {
+                    HStack {
+                        Spacer()
+                        Button {
+                            
+                        } label: {
+                            Text("Next")
+                                .font(.callout).bold()
+                                .foregroundStyle(.blue)
+                        }
+                        .opacity(1)
+                        Spacer()
+                    }
+
+                }
+                .listSectionSeparator(.hidden)
+                
+            }
             .listStyle(.plain)
             .navigationTitle(sourceType == .rest ? "SWAPI Rest API" : "SWAPI GQL API")
         }
