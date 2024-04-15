@@ -1,5 +1,5 @@
-query PlanetDetail($planetId: ID) {
-  planet(planetID: $planetId) {
+query PlanetDetail($id: ID) {
+  planet(id: $id) {
     id
     name
     climates

@@ -8,16 +8,16 @@ extension GraphQL {
     static let operationName: String = "PlanetDetail"
     static let operationDocument: ApolloAPI.OperationDocument = .init(
       definition: .init(
-        #"query PlanetDetail($planetId: ID) { planet(planetID: $planetId) { __typename id name climates created diameter edited gravity orbitalPeriod population rotationPeriod surfaceWater terrains } }"#
+        #"query PlanetDetail($id: ID) { planet(id: $id) { __typename id name climates created diameter edited gravity orbitalPeriod population rotationPeriod surfaceWater terrains } }"#
       ))
 
-    public var planetId: GraphQLNullable<ID>
+    public var id: GraphQLNullable<ID>
 
-    public init(planetId: GraphQLNullable<ID>) {
-      self.planetId = planetId
+    public init(id: GraphQLNullable<ID>) {
+      self.id = id
     }
 
-    public var __variables: Variables? { ["planetId": planetId] }
+    public var __variables: Variables? { ["id": id] }
 
     struct Data: GraphQL.SelectionSet {
       let __data: DataDict
@@ -25,7 +25,7 @@ extension GraphQL {
 
       static var __parentType: ApolloAPI.ParentType { GraphQL.Objects.Root }
       static var __selections: [ApolloAPI.Selection] { [
-        .field("planet", Planet?.self, arguments: ["planetID": .variable("planetId")]),
+        .field("planet", Planet?.self, arguments: ["id": .variable("id")]),
       ] }
 
       var planet: Planet? { __data["planet"] }
