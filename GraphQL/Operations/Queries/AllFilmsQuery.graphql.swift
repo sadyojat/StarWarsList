@@ -8,7 +8,7 @@ extension GraphQL {
     static let operationName: String = "AllFilms"
     static let operationDocument: ApolloAPI.OperationDocument = .init(
       definition: .init(
-        #"query AllFilms { allFilms { __typename films { __typename id title releaseDate producers openingCrawl director created edited episodeID } } }"#
+        #"query AllFilms { allFilms { __typename films { __typename id name: title releaseDate producers openingCrawl director created edited episodeID } } }"#
       ))
 
     public init() {}
@@ -56,7 +56,7 @@ extension GraphQL {
           static var __selections: [ApolloAPI.Selection] { [
             .field("__typename", String.self),
             .field("id", GraphQL.ID.self),
-            .field("title", String?.self),
+            .field("title", alias: "name", String?.self),
             .field("releaseDate", String?.self),
             .field("producers", [String?]?.self),
             .field("openingCrawl", String?.self),
@@ -69,7 +69,7 @@ extension GraphQL {
           /// The ID of an object
           var id: GraphQL.ID { __data["id"] }
           /// The title of this film.
-          var title: String? { __data["title"] }
+          var name: String? { __data["name"] }
           /// The ISO 8601 date format of film release at original creator country.
           var releaseDate: String? { __data["releaseDate"] }
           /// The name(s) of the producer(s) of this film.

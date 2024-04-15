@@ -8,7 +8,7 @@ extension GraphQL {
     static let operationName: String = "AllPeople"
     static let operationDocument: ApolloAPI.OperationDocument = .init(
       definition: .init(
-        #"query AllPeople { allPeople { __typename people { __typename name birthYear eyeColor gender hairColor filmConnection { __typename films { __typename title } } } } }"#
+        #"query AllPeople { allPeople { __typename people { __typename id name birthYear eyeColor gender hairColor filmConnection { __typename films { __typename title } } } } }"#
       ))
 
     public init() {}
@@ -55,6 +55,7 @@ extension GraphQL {
           static var __parentType: ApolloAPI.ParentType { GraphQL.Objects.Person }
           static var __selections: [ApolloAPI.Selection] { [
             .field("__typename", String.self),
+            .field("id", GraphQL.ID.self),
             .field("name", String?.self),
             .field("birthYear", String?.self),
             .field("eyeColor", String?.self),
@@ -63,6 +64,8 @@ extension GraphQL {
             .field("filmConnection", FilmConnection?.self),
           ] }
 
+          /// The ID of an object
+          var id: GraphQL.ID { __data["id"] }
           /// The name of this person.
           var name: String? { __data["name"] }
           /// The birth year of the person, using the in-universe standard of BBY or ABY -

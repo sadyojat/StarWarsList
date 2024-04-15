@@ -8,7 +8,7 @@ extension GraphQL {
     static let operationName: String = "AllVehicles"
     static let operationDocument: ApolloAPI.OperationDocument = .init(
       definition: .init(
-        #"query AllVehicles { allVehicles { __typename vehicles { __typename name model passengers vehicleClass maxAtmospheringSpeed manufacturers length id edited crew created costInCredits consumables cargoCapacity } } }"#
+        #"query AllVehicles { allVehicles { __typename vehicles { __typename id name model passengers vehicleClass maxAtmospheringSpeed manufacturers length edited crew created costInCredits consumables cargoCapacity } } }"#
       ))
 
     public init() {}
@@ -55,6 +55,7 @@ extension GraphQL {
           static var __parentType: ApolloAPI.ParentType { GraphQL.Objects.Vehicle }
           static var __selections: [ApolloAPI.Selection] { [
             .field("__typename", String.self),
+            .field("id", GraphQL.ID.self),
             .field("name", String?.self),
             .field("model", String?.self),
             .field("passengers", String?.self),
@@ -62,7 +63,6 @@ extension GraphQL {
             .field("maxAtmospheringSpeed", Int?.self),
             .field("manufacturers", [String?]?.self),
             .field("length", Double?.self),
-            .field("id", GraphQL.ID.self),
             .field("edited", String?.self),
             .field("crew", String?.self),
             .field("created", String?.self),
@@ -71,6 +71,8 @@ extension GraphQL {
             .field("cargoCapacity", Double?.self),
           ] }
 
+          /// The ID of an object
+          var id: GraphQL.ID { __data["id"] }
           /// The name of this vehicle. The common name, such as "Sand Crawler" or "Speeder
           /// bike".
           var name: String? { __data["name"] }
@@ -87,8 +89,6 @@ extension GraphQL {
           var manufacturers: [String?]? { __data["manufacturers"] }
           /// The length of this vehicle in meters.
           var length: Double? { __data["length"] }
-          /// The ID of an object
-          var id: GraphQL.ID { __data["id"] }
           /// The ISO 8601 date format of the time that this resource was edited.
           var edited: String? { __data["edited"] }
           /// The number of personnel needed to run or pilot this vehicle.

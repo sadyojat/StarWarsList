@@ -1,6 +1,7 @@
 query AllVehicles {
   allVehicles {
     vehicles {
+      id
       name
       model
       passengers
@@ -8,7 +9,6 @@ query AllVehicles {
       maxAtmospheringSpeed
       manufacturers
       length
-      id
       edited
       crew
       created

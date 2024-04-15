@@ -33,7 +33,7 @@ class GQLClient {
             do {
                 guard let data = try result.get().data else { return }
                 if let people = data.allFilms?.films as? [GraphQL.AllFilmsQuery.Data.AllFilms.Film] {
-                    completion?(people.compactMap { $0.title ?? nil })
+                    completion?(people.compactMap { $0.name ?? nil })
                 }
             } catch {
                 print(error)
