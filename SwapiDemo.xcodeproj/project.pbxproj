@@ -64,6 +64,7 @@
 		1EDAAAA92BCCE07F008CC0D9 /* planetdetail.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAAA82BCCE07F008CC0D9 /* planetdetail.graphql */; };
 		1EDAAAAB2BCCE0C7008CC0D9 /* PlanetDetailQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAAAA2BCCE0C7008CC0D9 /* PlanetDetailQuery.graphql.swift */; };
 		1EDAAAAD2BCCE92B008CC0D9 /* PageInfo.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAAAC2BCCE92B008CC0D9 /* PageInfo.graphql.swift */; };
+		1EDAAAAF2BCCF0B2008CC0D9 /* SwapiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAAAE2BCCF0B2008CC0D9 /* SwapiViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +126,7 @@
 		1EDAAAA82BCCE07F008CC0D9 /* planetdetail.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = planetdetail.graphql; sourceTree = "<group>"; };
 		1EDAAAAA2BCCE0C7008CC0D9 /* PlanetDetailQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetDetailQuery.graphql.swift; sourceTree = "<group>"; };
 		1EDAAAAC2BCCE92B008CC0D9 /* PageInfo.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageInfo.graphql.swift; path = schema/Objects/PageInfo.graphql.swift; sourceTree = "<group>"; };
+		1EDAAAAE2BCCF0B2008CC0D9 /* SwapiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				1E08B1F82BCB860A0013397D /* SwapiListView.swift */,
+				1EDAAAAE2BCCF0B2008CC0D9 /* SwapiViewModel.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				1EDAAA902BCC98A4008CC0D9 /* AllFilmsQuery.graphql.swift in Sources */,
 				1E08B1EB2BCB83CD0013397D /* SwapiDemoApp.swift in Sources */,
 				1EDAAA962BCC98A4008CC0D9 /* Node.graphql.swift in Sources */,
+				1EDAAAAF2BCCF0B2008CC0D9 /* SwapiViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
