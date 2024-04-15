@@ -28,12 +28,6 @@ struct SwapiListView: View {
                 }
                 .pickerStyle(.segmented)
                 .frame(height: 44)
-                .onChange(of: viewModel.selectedContent) { _, newValue in
-                    Task {
-                        do { try await viewModel.fetchContent(newValue) }
-                        catch {  print(error) }
-                    }
-                }
             }
             List {
                 Section {
@@ -42,7 +36,9 @@ struct SwapiListView: View {
                     HStack {
                         Spacer()
                         Button {
-                            
+                            Task {
+                                try? await viewModel.fetchContent(viewModel.selectedContent, .paginate)
+                            }                            
                         } label: {
                             Text("Next")
                                 .font(.callout).bold()

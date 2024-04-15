@@ -13,6 +13,11 @@ protocol SwapiRestConformance {
     var title: String { get }
 }
 
+enum ContentFetchState: Int, CaseIterable {
+    case cacheHitOrLoad
+    case paginate
+}
+
 enum SwapiContent: SwapiRestConformance, CaseIterable {
     case films
     case people

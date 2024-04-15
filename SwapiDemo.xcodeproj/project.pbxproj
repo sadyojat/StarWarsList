@@ -66,6 +66,7 @@
 		1EDAAAAD2BCCE92B008CC0D9 /* PageInfo.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAAAC2BCCE92B008CC0D9 /* PageInfo.graphql.swift */; };
 		1EDAAAAF2BCCF0B2008CC0D9 /* SwapiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAAAE2BCCF0B2008CC0D9 /* SwapiViewModel.swift */; };
 		1EEAAD322BCCF7D500E1052D /* GraphQL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAAD312BCCF7D500E1052D /* GraphQL+Extensions.swift */; };
+		1EEAAD362BCD08CF00E1052D /* AllPeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAAD352BCD08CF00E1052D /* AllPeopleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,7 @@
 		1EDAAAAC2BCCE92B008CC0D9 /* PageInfo.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageInfo.graphql.swift; path = schema/Objects/PageInfo.graphql.swift; sourceTree = "<group>"; };
 		1EDAAAAE2BCCF0B2008CC0D9 /* SwapiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiViewModel.swift; sourceTree = "<group>"; };
 		1EEAAD312BCCF7D500E1052D /* GraphQL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GraphQL+Extensions.swift"; sourceTree = "<group>"; };
+		1EEAAD352BCD08CF00E1052D /* AllPeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPeopleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,8 +189,9 @@
 		1E08B1FC2BCB861B0013397D /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				1EEAAD342BCD08B300E1052D /* DataModel */,
+				1EEAAD332BCD08A900E1052D /* ViewModel */,
 				1E08B1F82BCB860A0013397D /* SwapiListView.swift */,
-				1EDAAAAE2BCCF0B2008CC0D9 /* SwapiViewModel.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -353,6 +356,22 @@
 			path = schema;
 			sourceTree = "<group>";
 		};
+		1EEAAD332BCD08A900E1052D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAAAAE2BCCF0B2008CC0D9 /* SwapiViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1EEAAD342BCD08B300E1052D /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1EEAAD352BCD08CF00E1052D /* AllPeopleModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -460,6 +479,7 @@
 				1EDAAA932BCC98A4008CC0D9 /* AllSpeciesQuery.graphql.swift in Sources */,
 				1EDAAA972BCC98A4008CC0D9 /* Film.graphql.swift in Sources */,
 				1EDAAA632BCC96CE008CC0D9 /* AllStarshipsQuery.graphql.swift in Sources */,
+				1EEAAD362BCD08CF00E1052D /* AllPeopleModel.swift in Sources */,
 				1EDAAAA42BCC98A4008CC0D9 /* VehiclesConnection.graphql.swift in Sources */,
 				1EDAAA612BCC96CE008CC0D9 /* AllSpeciesQuery.graphql.swift in Sources */,
 				1E08B1FF2BCB9AC30013397D /* SwapiContent.swift in Sources */,

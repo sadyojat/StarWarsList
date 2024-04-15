@@ -8,35 +8,16 @@
 import Combine
 import Foundation
 
-class AllPeopleModel: ObservableObject {
-    private(set) var people: [GraphQL.AllPeople.Person]? {
-        didSet {
-            if let people {
-                names = people.compactMap{$0.name}
-            }
-        }
-    }
-    private(set) var pageInfo: GraphQL.AllPeople.PageInfo?
-    private(set) var totalCount: Int?
-    @Published private(set) var names: [String] = []
-        
-    func upsert(_ incoming: GraphQL.AllPeople) {
-        if let incomingList = incoming.people?.compactMap({ $0 }) {
-            if self.people == nil {
-                self.people = incomingList
-            } else {
-                self.people?.append(contentsOf: incomingList)
-            }
-        }
-        self.pageInfo = incoming.pageInfo
-        self.totalCount = incoming.totalCount ?? 0
-    }
-}
-
 @MainActor
 class SwapiViewModel: ObservableObject {
     @Published var listContent = [String]()
-    @Published var selectedContent: SwapiContent = .films
+    @Published var selectedContent: SwapiContent = .films {
+        didSet {
+            Task {
+                try? await fetchContent(selectedContent)
+            }
+        }
+    }
     @Published var searchText = ""
     @Published var isSearchActive = false
         
@@ -58,12 +39,12 @@ class SwapiViewModel: ObservableObject {
 }
 
 extension SwapiViewModel {
-    func fetchContent(_ type: SwapiContent) async throws {
+    func fetchContent(_ type: SwapiContent, _ fetchState: ContentFetchState = .cacheHitOrLoad) async throws {
         switch sourceType {
         case .rest:
             try await fetchRestAPIContent(type)
         case .gql:
-            fetchGQLContent(type)
+            fetchGQLContent(type, fetchState)
         }
     }
     
@@ -90,17 +71,10 @@ extension SwapiViewModel {
         }
     }
     
-    private func fetchGQLContent(_ type: SwapiContent) {
+    private func fetchGQLContent(_ type: SwapiContent, _ fetchState: ContentFetchState = .cacheHitOrLoad) {
         switch type {
         case .people:
-            if self.allPeopleModel.names.count > 0 {
-                listContent = self.allPeopleModel.names
-            } else {
-                GQLClient.shared.fetchAllPeople(AllQueryHeader(first: 10)) { [weak self] in
-                    guard let self, let incoming = $0 else { return }
-                    self.allPeopleModel.upsert(incoming)                    
-                }
-            }
+            allPeopleModel.fetch(fetchState)
         case .films:
             GQLClient.shared.fetchAllFilms { [weak self] in
                 guard let self else { return }
