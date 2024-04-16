@@ -34,11 +34,12 @@ class GQLClient {
         }
     }
     
-    func fetchAllFilms(_ completion: GQLListCompletion? = nil) {
-        client.fetch(query: GraphQL.AllFilmsQuery()) { result in
+    func fetchAllFilms(_ h: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
+        client.fetch(query: GraphQL.AllFilmsQuery(after: h.after, before: h.before,
+                                                  first: h.first, last: h.last)) { result in
             do {
                 guard let data = try result.get().data else { return }
-                if let people = data.allFilms?.films as? [GraphQL.AllFilmsQuery.Data.AllFilms.Film] {
+                if let people = data.allFilms?.films as? [GraphQL.AllFilms.Film] {
                     completion?(people.compactMap { $0.name ?? nil })
                 }
             } catch {
@@ -47,11 +48,13 @@ class GQLClient {
         }
     }
     
-    func fetchAllPlanets(_ completion: GQLListCompletion? = nil) {
-        client.fetch(query: GraphQL.AllPlanetsQuery()) { result in
+    func fetchAllPlanets(_ h: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
+        client.fetch(query: 
+                        GraphQL.AllPlanetsQuery(after: h.after, before: h.before, 
+                                                first: h.first, last: h.last)) { result in
             do {
                 guard let data = try result.get().data else { return }
-                if let people = data.allPlanets?.planets as? [GraphQL.AllPlanetsQuery.Data.AllPlanets.Planet] {
+                if let people = data.allPlanets?.planets as? [GraphQL.AllPlanets.Planet] {
                     completion?(people.compactMap { $0.name ?? nil })
                 }
             } catch {
@@ -60,11 +63,13 @@ class GQLClient {
         }
     }
     
-    func fetchAllSpecies(_ completion: GQLListCompletion? = nil) {
-        client.fetch(query: GraphQL.AllSpeciesQuery()) { result in
+    func fetchAllSpecies(_ h: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
+        client.fetch(query: 
+                        GraphQL.AllSpeciesQuery(after: h.after, before: h.before,
+                                                first: h.first, last: h.last)) { result in
             do {
                 guard let data = try result.get().data else { return }
-                if let people = data.allSpecies?.species as? [GraphQL.AllSpeciesQuery.Data.AllSpecies.Specy] {
+                if let people = data.allSpecies?.species as? [GraphQL.AllSpecies.Specy] {
                     completion?(people.compactMap { $0.name ?? nil })
                 }
             } catch {
@@ -73,11 +78,11 @@ class GQLClient {
         }
     }
     
-    func fetchAllStarships(_ completion: GQLListCompletion? = nil) {
-        client.fetch(query: GraphQL.AllStarshipsQuery()) { result in
+    func fetchAllStarships(_ h: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
+        client.fetch(query: GraphQL.AllStarshipsQuery(after: h.after, before: h.before, first: h.first, last: h.last)) { result in
             do {
                 guard let data = try result.get().data else { return }
-                if let people = data.allStarships?.starships as? [GraphQL.AllStarshipsQuery.Data.AllStarships.Starship] {
+                if let people = data.allStarships?.starships as? [GraphQL.AllStarships.Starship] {
                     completion?(people.compactMap { $0.name ?? nil })
                 }
             } catch {
@@ -86,11 +91,11 @@ class GQLClient {
         }
     }
     
-    func fetchAllVehicles(_ completion: GQLListCompletion? = nil) {
-        client.fetch(query: GraphQL.AllVehiclesQuery()) { result in
+    func fetchAllVehicles(_ h: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
+        client.fetch(query: GraphQL.AllVehiclesQuery(after: h.after, before: h.before, first: h.first, last: h.last)) { result in
             do {
                 guard let data = try result.get().data else { return }
-                if let people = data.allVehicles?.vehicles as? [GraphQL.AllVehiclesQuery.Data.AllVehicles.Vehicle] {
+                if let people = data.allVehicles?.vehicles as? [GraphQL.AllVehicles.Vehicle] {
                     completion?(people.compactMap { $0.name ?? nil })
                 }
             } catch {

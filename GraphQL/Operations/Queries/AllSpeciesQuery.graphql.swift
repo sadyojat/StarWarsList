@@ -8,10 +8,32 @@ extension GraphQL {
     static let operationName: String = "AllSpecies"
     static let operationDocument: ApolloAPI.OperationDocument = .init(
       definition: .init(
-        #"query AllSpecies { allSpecies { __typename species { __typename id name language hairColors eyeColors edited designation created classification averageLifespan averageHeight } } }"#
+        #"query AllSpecies($after: String, $before: String, $first: Int, $last: Int) { allSpecies(after: $after, before: $before, first: $first, last: $last) { __typename species { __typename id name language hairColors eyeColors edited designation created classification averageLifespan averageHeight } totalCount pageInfo { __typename endCursor hasNextPage hasPreviousPage startCursor } } }"#
       ))
 
-    public init() {}
+    public var after: GraphQLNullable<String>
+    public var before: GraphQLNullable<String>
+    public var first: GraphQLNullable<Int>
+    public var last: GraphQLNullable<Int>
+
+    public init(
+      after: GraphQLNullable<String>,
+      before: GraphQLNullable<String>,
+      first: GraphQLNullable<Int>,
+      last: GraphQLNullable<Int>
+    ) {
+      self.after = after
+      self.before = before
+      self.first = first
+      self.last = last
+    }
+
+    public var __variables: Variables? { [
+      "after": after,
+      "before": before,
+      "first": first,
+      "last": last
+    ] }
 
     struct Data: GraphQL.SelectionSet {
       let __data: DataDict
@@ -19,7 +41,12 @@ extension GraphQL {
 
       static var __parentType: ApolloAPI.ParentType { GraphQL.Objects.Root }
       static var __selections: [ApolloAPI.Selection] { [
-        .field("allSpecies", AllSpecies?.self),
+        .field("allSpecies", AllSpecies?.self, arguments: [
+          "after": .variable("after"),
+          "before": .variable("before"),
+          "first": .variable("first"),
+          "last": .variable("last")
+        ]),
       ] }
 
       var allSpecies: AllSpecies? { __data["allSpecies"] }
@@ -35,6 +62,8 @@ extension GraphQL {
         static var __selections: [ApolloAPI.Selection] { [
           .field("__typename", String.self),
           .field("species", [Specy?]?.self),
+          .field("totalCount", Int?.self),
+          .field("pageInfo", PageInfo.self),
         ] }
 
         /// A list of all of the objects returned in the connection. This is a convenience
@@ -44,6 +73,13 @@ extension GraphQL {
         /// the edge to enable efficient pagination, this shortcut cannot be used, and the
         /// full "{ edges { node } }" version should be used instead.
         var species: [Specy?]? { __data["species"] }
+        /// A count of the total number of objects in this connection, ignoring pagination.
+        /// This allows a client to fetch the first five objects by passing "5" as the
+        /// argument to "first", then fetch the total count so it could display "5 of 83",
+        /// for example.
+        var totalCount: Int? { __data["totalCount"] }
+        /// Information to aid in pagination.
+        var pageInfo: PageInfo { __data["pageInfo"] }
 
         /// AllSpecies.Specy
         ///
@@ -92,6 +128,32 @@ extension GraphQL {
           var averageLifespan: Int? { __data["averageLifespan"] }
           /// The average height of this species in centimeters.
           var averageHeight: Double? { __data["averageHeight"] }
+        }
+
+        /// AllSpecies.PageInfo
+        ///
+        /// Parent Type: `PageInfo`
+        struct PageInfo: GraphQL.SelectionSet {
+          let __data: DataDict
+          init(_dataDict: DataDict) { __data = _dataDict }
+
+          static var __parentType: ApolloAPI.ParentType { GraphQL.Objects.PageInfo }
+          static var __selections: [ApolloAPI.Selection] { [
+            .field("__typename", String.self),
+            .field("endCursor", String?.self),
+            .field("hasNextPage", Bool.self),
+            .field("hasPreviousPage", Bool.self),
+            .field("startCursor", String?.self),
+          ] }
+
+          /// When paginating forwards, the cursor to continue.
+          var endCursor: String? { __data["endCursor"] }
+          /// When paginating forwards, are there more items?
+          var hasNextPage: Bool { __data["hasNextPage"] }
+          /// When paginating backwards, are there more items?
+          var hasPreviousPage: Bool { __data["hasPreviousPage"] }
+          /// When paginating backwards, the cursor to continue.
+          var startCursor: String? { __data["startCursor"] }
         }
       }
     }

@@ -1,0 +1,25 @@
+query AllStarships($after: String, $before: String, $first: Int, $last: Int) {
+  allStarships(after: $after, before: $before, first: $first, last: $last) {
+    starships {
+      id
+      length
+      model
+      name
+      passengers
+      starshipClass
+      hyperdriveRating
+      crew
+      created
+      costInCredits
+      consumables
+      cargoCapacity
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+    }
+    totalCount
+  }
+}

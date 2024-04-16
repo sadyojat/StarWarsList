@@ -17,14 +17,8 @@
 		1E08B2052BCB9E9C0013397D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B2042BCB9E9C0013397D /* Model.swift */; };
 		1E08B2082BCBAD730013397D /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 1E08B2072BCBAD730013397D /* Apollo */; };
 		1E08B20A2BCBAE140013397D /* swapi.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 1E08B2092BCBAE140013397D /* swapi.graphqls */; };
-		1E08B20F2BCBAEC20013397D /* allpeople.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1E08B20E2BCBAEC20013397D /* allpeople.graphql */; };
 		1E08B2132BCBB1FC0013397D /* AllPeopleQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B2102BCBB1FC0013397D /* AllPeopleQuery.graphql.swift */; };
 		1EDAAA4F2BCC85F5008CC0D9 /* GQLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA4E2BCC85F5008CC0D9 /* GQLClient.swift */; };
-		1EDAAA512BCC93C1008CC0D9 /* allvehicles.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA502BCC93C1008CC0D9 /* allvehicles.graphql */; };
-		1EDAAA532BCC94A4008CC0D9 /* allStarships.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA522BCC94A4008CC0D9 /* allStarships.graphql */; };
-		1EDAAA552BCC94EF008CC0D9 /* allfilms.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA542BCC94EF008CC0D9 /* allfilms.graphql */; };
-		1EDAAA572BCC953B008CC0D9 /* allplanets.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA562BCC953B008CC0D9 /* allplanets.graphql */; };
-		1EDAAA592BCC9554008CC0D9 /* allspecies.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAAA582BCC9554008CC0D9 /* allspecies.graphql */; };
 		1EDAAA5B2BCC96C3008CC0D9 /* GraphQL.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA5A2BCC96C3008CC0D9 /* GraphQL.graphql.swift */; };
 		1EDAAA612BCC96CE008CC0D9 /* AllSpeciesQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA5C2BCC96CE008CC0D9 /* AllSpeciesQuery.graphql.swift */; };
 		1EDAAA622BCC96CE008CC0D9 /* AllFilmsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA5D2BCC96CE008CC0D9 /* AllFilmsQuery.graphql.swift */; };
@@ -80,15 +74,9 @@
 		1E08B2012BCB9E4C0013397D /* RestAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPICaller.swift; sourceTree = "<group>"; };
 		1E08B2042BCB9E9C0013397D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1E08B2092BCBAE140013397D /* swapi.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swapi.graphqls; sourceTree = "<group>"; };
-		1E08B20E2BCBAEC20013397D /* allpeople.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = allpeople.graphql; sourceTree = "<group>"; };
 		1E08B2102BCBB1FC0013397D /* AllPeopleQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPeopleQuery.graphql.swift; sourceTree = "<group>"; };
 		1EDAAA4D2BCC5548008CC0D9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1EDAAA4E2BCC85F5008CC0D9 /* GQLClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLClient.swift; sourceTree = "<group>"; };
-		1EDAAA502BCC93C1008CC0D9 /* allvehicles.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = allvehicles.graphql; sourceTree = "<group>"; };
-		1EDAAA522BCC94A4008CC0D9 /* allStarships.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = allStarships.graphql; sourceTree = "<group>"; };
-		1EDAAA542BCC94EF008CC0D9 /* allfilms.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = allfilms.graphql; sourceTree = "<group>"; };
-		1EDAAA562BCC953B008CC0D9 /* allplanets.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = allplanets.graphql; sourceTree = "<group>"; };
-		1EDAAA582BCC9554008CC0D9 /* allspecies.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = allspecies.graphql; sourceTree = "<group>"; };
 		1EDAAA5A2BCC96C3008CC0D9 /* GraphQL.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQL.graphql.swift; sourceTree = "<group>"; };
 		1EDAAA5C2BCC96CE008CC0D9 /* AllSpeciesQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllSpeciesQuery.graphql.swift; sourceTree = "<group>"; };
 		1EDAAA5D2BCC96CE008CC0D9 /* AllFilmsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllFilmsQuery.graphql.swift; sourceTree = "<group>"; };
@@ -231,7 +219,6 @@
 				1EDAAA892BCC98A4008CC0D9 /* schema */,
 				1E08B2122BCBB1FC0013397D /* Operations */,
 				1EDAAA4E2BCC85F5008CC0D9 /* GQLClient.swift */,
-				1E08B20D2BCBAEA40013397D /* queries */,
 				1E08B20C2BCBAE2B0013397D /* schema */,
 			);
 			path = GraphQL;
@@ -243,19 +230,6 @@
 				1E08B2092BCBAE140013397D /* swapi.graphqls */,
 			);
 			path = schema;
-			sourceTree = "<group>";
-		};
-		1E08B20D2BCBAEA40013397D /* queries */ = {
-			isa = PBXGroup;
-			children = (
-				1EDAAA542BCC94EF008CC0D9 /* allfilms.graphql */,
-				1E08B20E2BCBAEC20013397D /* allpeople.graphql */,
-				1EDAAA562BCC953B008CC0D9 /* allplanets.graphql */,
-				1EDAAA582BCC9554008CC0D9 /* allspecies.graphql */,
-				1EDAAA522BCC94A4008CC0D9 /* allStarships.graphql */,
-				1EDAAA502BCC93C1008CC0D9 /* allvehicles.graphql */,
-			);
-			path = queries;
 			sourceTree = "<group>";
 		};
 		1E08B2112BCBB1FC0013397D /* Queries */ = {
@@ -279,7 +253,7 @@
 			path = Operations;
 			sourceTree = "<group>";
 		};
-		1EDAAA6C2BCC98A4008CC0D9 /* queries */ = {
+		1E14C4652BCE1FA4009C2006 /* All */ = {
 			isa = PBXGroup;
 			children = (
 				1EDAAA662BCC98A4008CC0D9 /* allfilms.graphql */,
@@ -288,7 +262,23 @@
 				1EDAAA692BCC98A4008CC0D9 /* allspecies.graphql */,
 				1EDAAA6A2BCC98A4008CC0D9 /* allStarships.graphql */,
 				1EDAAA6B2BCC98A4008CC0D9 /* allvehicles.graphql */,
+			);
+			path = All;
+			sourceTree = "<group>";
+		};
+		1E14C4662BCE1FB0009C2006 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
 				1EDAAAA82BCCE07F008CC0D9 /* planetdetail.graphql */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		1EDAAA6C2BCC98A4008CC0D9 /* queries */ = {
+			isa = PBXGroup;
+			children = (
+				1E14C4662BCE1FB0009C2006 /* Detail */,
+				1E14C4652BCE1FA4009C2006 /* All */,
 			);
 			path = queries;
 			sourceTree = "<group>";
@@ -436,23 +426,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E08B20F2BCBAEC20013397D /* allpeople.graphql in Resources */,
 				1EDAAA8B2BCC98A4008CC0D9 /* allpeople.graphql in Resources */,
 				1EDAAAA72BCC98A4008CC0D9 /* swapi.graphqls in Resources */,
-				1EDAAA552BCC94EF008CC0D9 /* allfilms.graphql in Resources */,
 				1EDAAA8C2BCC98A4008CC0D9 /* allplanets.graphql in Resources */,
 				1EDAAA8F2BCC98A4008CC0D9 /* allvehicles.graphql in Resources */,
 				1E08B1F22BCB83CE0013397D /* Preview Assets.xcassets in Resources */,
 				1EDAAA8E2BCC98A4008CC0D9 /* allStarships.graphql in Resources */,
 				1E08B1EF2BCB83CE0013397D /* Assets.xcassets in Resources */,
 				1EDAAAA92BCCE07F008CC0D9 /* planetdetail.graphql in Resources */,
-				1EDAAA532BCC94A4008CC0D9 /* allStarships.graphql in Resources */,
 				1EDAAA8D2BCC98A4008CC0D9 /* allspecies.graphql in Resources */,
 				1E08B20A2BCBAE140013397D /* swapi.graphqls in Resources */,
-				1EDAAA512BCC93C1008CC0D9 /* allvehicles.graphql in Resources */,
 				1EDAAA8A2BCC98A4008CC0D9 /* allfilms.graphql in Resources */,
-				1EDAAA572BCC953B008CC0D9 /* allplanets.graphql in Resources */,
-				1EDAAA592BCC9554008CC0D9 /* allspecies.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

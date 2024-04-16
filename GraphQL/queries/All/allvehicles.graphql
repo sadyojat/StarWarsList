@@ -1,0 +1,27 @@
+query AllVehicles($after: String, $before: String, $first: Int, $last: Int) {
+  allVehicles(after: $after, before: $before, first: $first, last: $last) {
+    vehicles {
+      id
+      name
+      model
+      passengers
+      vehicleClass
+      maxAtmospheringSpeed
+      manufacturers
+      length
+      edited
+      crew
+      created
+      costInCredits
+      consumables
+      cargoCapacity
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+    }
+    totalCount
+  }
+}

@@ -1,0 +1,25 @@
+query AllPlanets($after: String, $before: String, $first: Int, $last: Int) {
+  allPlanets(after: $after, before: $before, first: $first, last: $last) {
+    planets {
+      climates
+      created
+      diameter
+      edited
+      gravity
+      id
+      name
+      orbitalPeriod
+      population
+      rotationPeriod
+      surfaceWater
+      terrains
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+    }
+    totalCount
+  }
+}

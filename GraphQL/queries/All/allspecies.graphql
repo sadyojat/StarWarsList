@@ -1,0 +1,24 @@
+query AllSpecies($after: String, $before: String, $first: Int, $last: Int) {
+  allSpecies(after: $after, before: $before, first: $first, last: $last) {
+    species {
+      id
+      name
+      language
+      hairColors
+      eyeColors
+      edited
+      designation
+      created
+      classification
+      averageLifespan
+      averageHeight
+    }
+    totalCount
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+    }
+  }
+}
