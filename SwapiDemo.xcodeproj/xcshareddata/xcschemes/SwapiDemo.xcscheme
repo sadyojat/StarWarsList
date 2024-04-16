@@ -35,7 +35,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E14C4832BCE33C7009C2006"
+               BlueprintIdentifier = "1E49047A2BCE37CF00C8BF6C"
                BuildableName = "SwapiDemoSnapshotTests.xctest"
                BlueprintName = "SwapiDemoSnapshotTests"
                ReferencedContainer = "container:SwapiDemo.xcodeproj">

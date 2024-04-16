@@ -7,16 +7,17 @@
 
 import Combine
 import Foundation
+import ApolloAPI
 
 class AllPeopleModel: ObservableObject {
-    private(set) var people: [GraphQL.AllPeople.Person]? {
+    private(set) var people: [AllPeople.Person]? {
         didSet {
             if let people {
                 names = people.compactMap{$0.name}
             }
         }
     }
-    private(set) var pageInfo: GraphQL.AllPeople.PageInfo?
+    private(set) var pageInfo: AllPeople.PageInfo?
     private(set) var totalCount: Int?
     @Published private(set) var names: [String] = []       
     
@@ -24,7 +25,7 @@ class AllPeopleModel: ObservableObject {
         var queryHeader = AllQueryHeader()
         switch fetchState {
         case .cacheHitOrLoad:
-            queryHeader.first = people?.count ?? 10
+            queryHeader.first = GraphQLNullable<Int>(integerLiteral: people?.count ?? 10)
         case .paginate:
             queryHeader.first = GraphQLNullable<Int>(integerLiteral: ((people?.count ?? 0) + 10))
         }

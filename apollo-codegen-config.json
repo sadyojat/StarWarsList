@@ -1,5 +1,5 @@
 {
-  "schemaNamespace" : "GraphQL",
+  "schemaNamespace" : "SwapiGQL",
   "input" : {
     "operationSearchPaths" : [
       "**/*.graphql"
@@ -10,20 +10,20 @@
   },
   "output" : {
     "testMocks" : {
-      "none" : {
+      "swiftPackage" : {
+          "targetName": "GQLMocks"
       }
     },
     "schemaTypes" : {
-      "path" : "./GraphQL",
+      "path" : "./SwapiGQL",
       "moduleType" : {
-        "embeddedInTarget" : {
-          "name" : "SwapiDemo"
+        "swiftPackageManager" : {
         }
       }
     },
     "operations" : {
       "inSchemaModule" : {
       }
-    }
+    },   
   }
 }
