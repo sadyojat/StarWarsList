@@ -18,6 +18,8 @@
 		1E08B2082BCBAD730013397D /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 1E08B2072BCBAD730013397D /* Apollo */; };
 		1E08B20A2BCBAE140013397D /* swapi.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 1E08B2092BCBAE140013397D /* swapi.graphqls */; };
 		1E08B2132BCBB1FC0013397D /* AllPeopleQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B2102BCBB1FC0013397D /* AllPeopleQuery.graphql.swift */; };
+		1E49047E2BCE37CF00C8BF6C /* SwapiListViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E49047D2BCE37CF00C8BF6C /* SwapiListViewSnapshotTests.swift */; };
+		1E49048B2BCE392700C8BF6C /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 1E49048A2BCE392700C8BF6C /* SnapshotTesting */; };
 		1EDAAA4F2BCC85F5008CC0D9 /* GQLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA4E2BCC85F5008CC0D9 /* GQLClient.swift */; };
 		1EDAAA5B2BCC96C3008CC0D9 /* GraphQL.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA5A2BCC96C3008CC0D9 /* GraphQL.graphql.swift */; };
 		1EDAAA612BCC96CE008CC0D9 /* AllSpeciesQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAAA5C2BCC96CE008CC0D9 /* AllSpeciesQuery.graphql.swift */; };
@@ -63,6 +65,16 @@
 		1EEAAD362BCD08CF00E1052D /* AllPeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAAD352BCD08CF00E1052D /* AllPeopleModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1E49047F2BCE37CF00C8BF6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E08B1DF2BCB83CD0013397D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E08B1E62BCB83CD0013397D;
+			remoteInfo = SwapiDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1E08B1E72BCB83CD0013397D /* SwapiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwapiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E08B1EA2BCB83CD0013397D /* SwapiDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiDemoApp.swift; sourceTree = "<group>"; };
@@ -75,6 +87,8 @@
 		1E08B2042BCB9E9C0013397D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1E08B2092BCBAE140013397D /* swapi.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swapi.graphqls; sourceTree = "<group>"; };
 		1E08B2102BCBB1FC0013397D /* AllPeopleQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPeopleQuery.graphql.swift; sourceTree = "<group>"; };
+		1E49047B2BCE37CF00C8BF6C /* SwapiDemoSnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwapiDemoSnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E49047D2BCE37CF00C8BF6C /* SwapiListViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiListViewSnapshotTests.swift; sourceTree = "<group>"; };
 		1EDAAA4D2BCC5548008CC0D9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1EDAAA4E2BCC85F5008CC0D9 /* GQLClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLClient.swift; sourceTree = "<group>"; };
 		1EDAAA5A2BCC96C3008CC0D9 /* GraphQL.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQL.graphql.swift; sourceTree = "<group>"; };
@@ -130,6 +144,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E4904782BCE37CF00C8BF6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E49048B2BCE392700C8BF6C /* SnapshotTesting in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -139,7 +161,9 @@
 				1EDAAA4D2BCC5548008CC0D9 /* README.md */,
 				1E08B20B2BCBAE210013397D /* GraphQL */,
 				1E08B1E92BCB83CD0013397D /* SwapiDemo */,
+				1E49047C2BCE37CF00C8BF6C /* SwapiDemoSnapshotTests */,
 				1E08B1E82BCB83CD0013397D /* Products */,
+				1E4904892BCE392700C8BF6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				1E08B1E72BCB83CD0013397D /* SwapiDemo.app */,
+				1E49047B2BCE37CF00C8BF6C /* SwapiDemoSnapshotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,6 +299,21 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		1E49047C2BCE37CF00C8BF6C /* SwapiDemoSnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E49047D2BCE37CF00C8BF6C /* SwapiListViewSnapshotTests.swift */,
+			);
+			path = SwapiDemoSnapshotTests;
+			sourceTree = "<group>";
+		};
+		1E4904892BCE392700C8BF6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1EDAAA6C2BCC98A4008CC0D9 /* queries */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +425,27 @@
 			productReference = 1E08B1E72BCB83CD0013397D /* SwapiDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1E49047A2BCE37CF00C8BF6C /* SwapiDemoSnapshotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E4904832BCE37CF00C8BF6C /* Build configuration list for PBXNativeTarget "SwapiDemoSnapshotTests" */;
+			buildPhases = (
+				1E4904772BCE37CF00C8BF6C /* Sources */,
+				1E4904782BCE37CF00C8BF6C /* Frameworks */,
+				1E4904792BCE37CF00C8BF6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E4904802BCE37CF00C8BF6C /* PBXTargetDependency */,
+			);
+			name = SwapiDemoSnapshotTests;
+			packageProductDependencies = (
+				1E49048A2BCE392700C8BF6C /* SnapshotTesting */,
+			);
+			productName = SwapiDemoSnapshotTests;
+			productReference = 1E49047B2BCE37CF00C8BF6C /* SwapiDemoSnapshotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -397,6 +458,10 @@
 				TargetAttributes = {
 					1E08B1E62BCB83CD0013397D = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					1E49047A2BCE37CF00C8BF6C = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 1E08B1E62BCB83CD0013397D;
 					};
 				};
 			};
@@ -411,12 +476,14 @@
 			mainGroup = 1E08B1DE2BCB83CD0013397D;
 			packageReferences = (
 				1E08B2062BCBAD730013397D /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				1E4904842BCE38DB00C8BF6C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = 1E08B1E82BCB83CD0013397D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				1E08B1E62BCB83CD0013397D /* SwapiDemo */,
+				1E49047A2BCE37CF00C8BF6C /* SwapiDemoSnapshotTests */,
 			);
 		};
 /* End PBXProject section */
@@ -437,6 +504,13 @@
 				1EDAAA8D2BCC98A4008CC0D9 /* allspecies.graphql in Resources */,
 				1E08B20A2BCBAE140013397D /* swapi.graphqls in Resources */,
 				1EDAAA8A2BCC98A4008CC0D9 /* allfilms.graphql in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4904792BCE37CF00C8BF6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +566,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E4904772BCE37CF00C8BF6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E49047E2BCE37CF00C8BF6C /* SwapiListViewSnapshotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E4904802BCE37CF00C8BF6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E08B1E62BCB83CD0013397D /* SwapiDemo */;
+			targetProxy = 1E49047F2BCE37CF00C8BF6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1E08B1F32BCB83CE0013397D /* Debug */ = {
@@ -672,6 +762,42 @@
 			};
 			name = Release;
 		};
+		1E4904812BCE37CF00C8BF6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2UNMMBBBM3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alokirde.app.SwapiDemoSnapshotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwapiDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwapiDemo";
+			};
+			name = Debug;
+		};
+		1E4904822BCE37CF00C8BF6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2UNMMBBBM3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alokirde.app.SwapiDemoSnapshotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwapiDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwapiDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -693,6 +819,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1E4904832BCE37CF00C8BF6C /* Build configuration list for PBXNativeTarget "SwapiDemoSnapshotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4904812BCE37CF00C8BF6C /* Debug */,
+				1E4904822BCE37CF00C8BF6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -704,6 +839,14 @@
 				minimumVersion = 1.9.3;
 			};
 		};
+		1E4904842BCE38DB00C8BF6C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.16.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -711,6 +854,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E08B2062BCBAD730013397D /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		1E49048A2BCE392700C8BF6C /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E4904842BCE38DB00C8BF6C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,5 +1,5 @@
 {
-  "originHash" : "931440278103ba39b2d835f2c346aeb873ebcb4ff41767ce2ae24e250b359dbe",
+  "originHash" : "c0803839669224a4af33c915b5e39e8d85a1aede21ff82ab525de86e4c235ef9",
   "pins" : [
     {
       "identity" : "apollo-ios",
@@ -17,6 +17,24 @@
       "state" : {
         "revision" : "f0af5e0a2b6917ae38e3019e3456fd0fa9365864",
         "version" : "0.15.1"
+      }
+    },
+    {
+      "identity" : "swift-snapshot-testing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-snapshot-testing",
+      "state" : {
+        "revision" : "625ccca8570773dd84a34ee51a81aa2bc5a4f97a",
+        "version" : "1.16.0"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax",
+      "state" : {
+        "revision" : "fa8f95c2d536d6620cc2f504ebe8a6167c9fc2dd",
+        "version" : "510.0.1"
       }
     }
   ],
