@@ -10,7 +10,8 @@ import Foundation
 
 @MainActor
 class SwapiViewModel: ObservableObject {
-    @Published var listContent = [String]()
+    @Published private(set) var listContent = [String]()
+    @Published private(set) var disablePagination = false
     @Published var selectedContent: SwapiContent = .films {
         didSet {
             Task {
@@ -33,6 +34,7 @@ class SwapiViewModel: ObservableObject {
             .sink { [weak self] peopleNames in
                 guard let self else { return }
                 self.listContent = peopleNames
+                disablePagination = (peopleNames.count == self.allPeopleModel.totalCount)
             }
             .store(in: &subscriptions)
     }
@@ -72,6 +74,7 @@ extension SwapiViewModel {
     }
     
     private func fetchGQLContent(_ type: SwapiContent, _ fetchState: ContentFetchState = .cacheHitOrLoad) {
+        disablePagination = false
         switch type {
         case .people:
             allPeopleModel.fetch(fetchState)

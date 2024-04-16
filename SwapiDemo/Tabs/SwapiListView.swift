@@ -44,7 +44,7 @@ struct SwapiListView: View {
                                 .font(.callout).bold()
                                 .foregroundStyle(.blue)
                         }
-                        .opacity(1)
+                        .opacity(viewModel.disablePagination ? 0 : 1)
                         Spacer()
                     }
 
