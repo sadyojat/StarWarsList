@@ -18,7 +18,7 @@ enum ContentFetchState: Int, CaseIterable {
     case paginate
 }
 
-enum SwapiContent: SwapiRestConformance, CaseIterable {
+enum StarWarsCharacters: SwapiRestConformance, CaseIterable {
     case films
     case people
     case planets

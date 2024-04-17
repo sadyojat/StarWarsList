@@ -12,7 +12,7 @@ import Foundation
 class SwapiViewModel: ObservableObject {
     @Published private(set) var listContent = [String]()
     @Published private(set) var disablePagination = false
-    @Published var selectedContent: SwapiContent = .films {
+    @Published var selectedContent: StarWarsCharacters = .films {
         didSet {
             Task {
                 try? await fetchContent(selectedContent)
@@ -41,7 +41,7 @@ class SwapiViewModel: ObservableObject {
 }
 
 extension SwapiViewModel {
-    func fetchContent(_ type: SwapiContent, _ fetchState: ContentFetchState = .cacheHitOrLoad) async throws {
+    func fetchContent(_ type: StarWarsCharacters, _ fetchState: ContentFetchState = .cacheHitOrLoad) async throws {
         switch sourceType {
         case .rest:
             try await fetchRestAPIContent(type)
@@ -50,7 +50,7 @@ extension SwapiViewModel {
         }
     }
     
-    private func fetchRestAPIContent(_ type: SwapiContent) async throws {
+    private func fetchRestAPIContent(_ type: StarWarsCharacters) async throws {
         switch type {
         case .people:
             let result = try await RestAPICaller.shared.fetch(type) as AllResults<People>
@@ -73,7 +73,7 @@ extension SwapiViewModel {
         }
     }
     
-    private func fetchGQLContent(_ type: SwapiContent, _ fetchState: ContentFetchState = .cacheHitOrLoad) {
+    private func fetchGQLContent(_ type: StarWarsCharacters, _ fetchState: ContentFetchState = .cacheHitOrLoad) {
         disablePagination = false
         switch type {
         case .people:

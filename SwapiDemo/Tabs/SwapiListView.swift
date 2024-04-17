@@ -22,7 +22,7 @@ struct SwapiListView: View {
         NavigationStack {
             VStack {
                 Picker("Learn More about Star Wars", selection: $viewModel.selectedContent) {
-                    ForEach(SwapiContent.allCases, id: \.self) { selection in                        
+                    ForEach(StarWarsCharacters.allCases, id: \.self) { selection in                        
                         Text(selection.title)
                     }
                 }

@@ -12,7 +12,7 @@
 		1E08B1EF2BCB83CE0013397D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E08B1EE2BCB83CE0013397D /* Assets.xcassets */; };
 		1E08B1F22BCB83CE0013397D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E08B1F12BCB83CE0013397D /* Preview Assets.xcassets */; };
 		1E08B1F92BCB860A0013397D /* SwapiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B1F82BCB860A0013397D /* SwapiListView.swift */; };
-		1E08B1FF2BCB9AC30013397D /* SwapiContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B1FE2BCB9AC30013397D /* SwapiContent.swift */; };
+		1E08B1FF2BCB9AC30013397D /* StarWarsCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B1FE2BCB9AC30013397D /* StarWarsCharacters.swift */; };
 		1E08B2022BCB9E4C0013397D /* RestAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B2012BCB9E4C0013397D /* RestAPICaller.swift */; };
 		1E08B2052BCB9E9C0013397D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08B2042BCB9E9C0013397D /* Model.swift */; };
 		1E08B2082BCBAD730013397D /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 1E08B2072BCBAD730013397D /* Apollo */; };
@@ -49,7 +49,7 @@
 		1E08B1EE2BCB83CE0013397D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E08B1F12BCB83CE0013397D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E08B1F82BCB860A0013397D /* SwapiListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiListView.swift; sourceTree = "<group>"; };
-		1E08B1FE2BCB9AC30013397D /* SwapiContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiContent.swift; sourceTree = "<group>"; };
+		1E08B1FE2BCB9AC30013397D /* StarWarsCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsCharacters.swift; sourceTree = "<group>"; };
 		1E08B2012BCB9E4C0013397D /* RestAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPICaller.swift; sourceTree = "<group>"; };
 		1E08B2042BCB9E9C0013397D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1E49047B2BCE37CF00C8BF6C /* SwapiDemoSnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwapiDemoSnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				1EDAAA4D2BCC5548008CC0D9 /* README.md */,
-				1E08B20B2BCBAE210013397D /* GQLDefinitions */,
 				1E08B1E92BCB83CD0013397D /* SwapiDemo */,
 				1E49047C2BCE37CF00C8BF6C /* SwapiDemoSnapshotTests */,
 				1E08B1E82BCB83CD0013397D /* Products */,
@@ -113,8 +112,8 @@
 		1E08B1E92BCB83CD0013397D /* SwapiDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1E08B2032BCB9E6D0013397D /* Model */,
-				1E08B2002BCB9E170013397D /* RestAPI */,
+				1E4904FA2BCF46E700C8BF6C /* REST */,
+				1E08B20B2BCBAE210013397D /* GQL */,
 				1E08B1FD2BCB9AB20013397D /* MetaData */,
 				1E08B1FC2BCB861B0013397D /* Tabs */,
 				1E08B1EA2BCB83CD0013397D /* SwapiDemoApp.swift */,
@@ -146,7 +145,7 @@
 		1E08B1FD2BCB9AB20013397D /* MetaData */ = {
 			isa = PBXGroup;
 			children = (
-				1E08B1FE2BCB9AC30013397D /* SwapiContent.swift */,
+				1E08B1FE2BCB9AC30013397D /* StarWarsCharacters.swift */,
 			);
 			path = MetaData;
 			sourceTree = "<group>";
@@ -167,14 +166,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		1E08B20B2BCBAE210013397D /* GQLDefinitions */ = {
+		1E08B20B2BCBAE210013397D /* GQL */ = {
 			isa = PBXGroup;
 			children = (
 				1EDAAA6C2BCC98A4008CC0D9 /* queries */,
 				1EDAAA892BCC98A4008CC0D9 /* schema */,
 				1EDAAA4E2BCC85F5008CC0D9 /* GQLClient.swift */,
 			);
-			path = GQLDefinitions;
+			path = GQL;
 			sourceTree = "<group>";
 		};
 		1E14C4652BCE1FA4009C2006 /* All */ = {
@@ -211,6 +210,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E4904FA2BCF46E700C8BF6C /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				1E08B2032BCB9E6D0013397D /* Model */,
+				1E08B2002BCB9E170013397D /* RestAPI */,
+			);
+			path = REST;
 			sourceTree = "<group>";
 		};
 		1EDAAA6C2BCC98A4008CC0D9 /* queries */ = {
@@ -369,7 +377,7 @@
 				1EDAAA4F2BCC85F5008CC0D9 /* GQLClient.swift in Sources */,
 				1E08B1F92BCB860A0013397D /* SwapiListView.swift in Sources */,
 				1EEAAD362BCD08CF00E1052D /* AllPeopleModel.swift in Sources */,
-				1E08B1FF2BCB9AC30013397D /* SwapiContent.swift in Sources */,
+				1E08B1FF2BCB9AC30013397D /* StarWarsCharacters.swift in Sources */,
 				1E08B1ED2BCB83CD0013397D /* MainTabbedView.swift in Sources */,
 				1E08B2052BCB9E9C0013397D /* Model.swift in Sources */,
 				1E08B2022BCB9E4C0013397D /* RestAPICaller.swift in Sources */,
