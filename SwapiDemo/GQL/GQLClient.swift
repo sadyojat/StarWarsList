@@ -28,10 +28,10 @@ class GQLClient {
     static let shared = GQLClient()
     private init() {}
     private let client = ApolloClient(url: URL(string: "https://swapi-graphql.netlify.app/.netlify/functions/index")!)
-    
-    func fetchAllPeople(_ h: AllQueryHeader = AllQueryHeader(), _ completion: ((AllPeople?) -> Void)? = nil ) {
-        client.fetch(query: AllPeopleQuery(first: h.first, last: h.last,
-                                                   before: h.before, after: h.after)) { result in
+
+    func fetchAllPeople(_ header: AllQueryHeader = AllQueryHeader(), _ completion: ((AllPeople?) -> Void)? = nil ) {
+        client.fetch(query: AllPeopleQuery(first: header.first, last: header.last,
+                                                   before: header.before, after: header.after)) { result in
             do {
                 guard let data = try result.get().data else { return }
                 completion?(data.allPeople)
@@ -40,10 +40,10 @@ class GQLClient {
             }
         }
     }
-    
-    func fetchAllFilms(_ h: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
-        client.fetch(query: AllFilmsQuery(after: h.after, before: h.before,
-                                                  first: h.first, last: h.last)) { result in
+
+    func fetchAllFilms(_ header: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
+        client.fetch(query: AllFilmsQuery(after: header.after, before: header.before,
+                                                  first: header.first, last: header.last)) { result in
             do {
                 guard let data = try result.get().data else { return }
                 if let people = data.allFilms?.films as? [AllFilms.Film] {
@@ -54,11 +54,11 @@ class GQLClient {
             }
         }
     }
-    
-    func fetchAllPlanets(_ h: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
-        client.fetch(query: 
-                        AllPlanetsQuery(after: h.after, before: h.before,
-                                                first: h.first, last: h.last)) { result in
+
+    func fetchAllPlanets(_ header: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
+        client.fetch(query:
+                        AllPlanetsQuery(after: header.after, before: header.before,
+                                                first: header.first, last: header.last)) { result in
             do {
                 guard let data = try result.get().data else { return }
                 if let people = data.allPlanets?.planets as? [AllPlanets.Planet] {
@@ -69,11 +69,11 @@ class GQLClient {
             }
         }
     }
-    
-    func fetchAllSpecies(_ h: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
-        client.fetch(query: 
-                        AllSpeciesQuery(after: h.after, before: h.before,
-                                                first: h.first, last: h.last)) { result in
+
+    func fetchAllSpecies(_ header: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
+        client.fetch(query:
+                        AllSpeciesQuery(after: header.after, before: header.before,
+                                                first: header.first, last: header.last)) { result in
             do {
                 guard let data = try result.get().data else { return }
                 if let people = data.allSpecies?.species as? [AllSpecies.Specy] {
@@ -84,9 +84,13 @@ class GQLClient {
             }
         }
     }
-    
-    func fetchAllStarships(_ h: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
-        client.fetch(query: AllStarshipsQuery(after: h.after, before: h.before, first: h.first, last: h.last)) { result in
+
+    func fetchAllStarships(_ header: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
+            client.fetch(query: AllStarshipsQuery(
+                after: header.after,
+                before: header.before,
+                first: header.first,
+                last: header.last)) { result in
             do {
                 guard let data = try result.get().data else { return }
                 if let people = data.allStarships?.starships as? [AllStarships.Starship] {
@@ -97,9 +101,14 @@ class GQLClient {
             }
         }
     }
-    
-    func fetchAllVehicles(_ h: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
-        client.fetch(query: AllVehiclesQuery(after: h.after, before: h.before, first: h.first, last: h.last)) { result in
+
+    func fetchAllVehicles(_ header: AllQueryHeader = AllQueryHeader(), _ completion: GQLListCompletion? = nil) {
+        client.fetch(query:
+                        AllVehiclesQuery(
+                            after: header.after,
+                            before: header.before,
+                            first: header.first,
+                            last: header.last)) { result in
             do {
                 guard let data = try result.get().data else { return }
                 if let people = data.allVehicles?.vehicles as? [AllVehicles.Vehicle] {
@@ -110,6 +119,4 @@ class GQLClient {
             }
         }
     }
-    
-        
 }

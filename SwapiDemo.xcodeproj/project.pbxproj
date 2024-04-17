@@ -268,6 +268,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				84CAF8772BCFAFF5001717E4 /* PBXTargetDependency */,
 			);
 			name = SwapiDemo;
 			packageProductDependencies = (
@@ -331,6 +332,7 @@
 				1E08B2062BCBAD730013397D /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				1E4904842BCE38DB00C8BF6C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 				1E4904F72BCF383200C8BF6C /* XCLocalSwiftPackageReference "SwapiGQL" */,
+				84CAF8752BCFAFDA001717E4 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 1E08B1E82BCB83CD0013397D /* Products */;
 			projectDirPath = "";
@@ -401,6 +403,10 @@
 			isa = PBXTargetDependency;
 			target = 1E08B1E62BCB83CD0013397D /* SwapiDemo */;
 			targetProxy = 1E49047F2BCE37CF00C8BF6C /* PBXContainerItemProxy */;
+		};
+		84CAF8772BCFAFF5001717E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 84CAF8762BCFAFF5001717E4 /* SwiftLintPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -674,6 +680,14 @@
 				minimumVersion = 1.16.0;
 			};
 		};
+		84CAF8752BCFAFDA001717E4 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.54.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -691,6 +705,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E4904F72BCF383200C8BF6C /* XCLocalSwiftPackageReference "SwapiGQL" */;
 			productName = SwapiGQL;
+		};
+		84CAF8762BCFAFF5001717E4 /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84CAF8752BCFAFDA001717E4 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

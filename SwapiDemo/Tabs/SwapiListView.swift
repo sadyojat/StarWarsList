@@ -7,22 +7,18 @@
 
 import SwiftUI
 
-
 struct SwapiListView: View {
-    
     @StateObject private var viewModel: SwapiViewModel
-        
-    
+
     init(sourceType: RemoteSourceType = .rest) {
         _viewModel = StateObject(wrappedValue: SwapiViewModel(sourceType: sourceType))
     }
-    
+
     var body: some View {
-       
         NavigationStack {
             VStack {
                 Picker("Learn More about Star Wars", selection: $viewModel.selectedContent) {
-                    ForEach(StarWarsCharacters.allCases, id: \.self) { selection in                        
+                    ForEach(StarWarsCharacters.allCases, id: \.self) { selection in
                         Text(selection.title)
                     }
                 }
@@ -38,7 +34,7 @@ struct SwapiListView: View {
                         Button {
                             Task {
                                 try? await viewModel.fetchContent(viewModel.selectedContent, .paginate)
-                            }                            
+                            }
                         } label: {
                             Text("Next")
                                 .font(.callout).bold()
@@ -50,7 +46,7 @@ struct SwapiListView: View {
 
                 }
                 .listSectionSeparator(.hidden)
-                
+
             }
             .listStyle(.plain)
             .navigationTitle(viewModel.sourceType == .rest ? "SWAPI Rest API" : "SWAPI GQL API")
@@ -61,13 +57,15 @@ struct SwapiListView: View {
             prompt: "Search \(viewModel.selectedContent)")
         .onAppear(perform: {
             Task {
-                do { try await viewModel.fetchContent(viewModel.selectedContent) }
-                catch { print(error) }
+                do {
+                    try await viewModel.fetchContent(viewModel.selectedContent)
+                } catch {
+                    print(error)
+                }
             }
         })
     }
 }
-
 
 #Preview {
     SwapiListView()

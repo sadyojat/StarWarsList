@@ -21,13 +21,13 @@ class SwapiViewModel: ObservableObject {
     }
     @Published var searchText = ""
     @Published var isSearchActive = false
-        
+
     private var allPeopleModel = AllPeopleModel()
-    
+
     let sourceType: RemoteSourceType
-    
+
     private var subscriptions = Set<AnyCancellable>()
-    
+
     init(sourceType: RemoteSourceType = .rest) {
         self.sourceType = sourceType
         self.allPeopleModel.$names
@@ -49,7 +49,7 @@ extension SwapiViewModel {
             fetchGQLContent(type, fetchState)
         }
     }
-    
+
     private func fetchRestAPIContent(_ type: StarWarsCharacters) async throws {
         switch type {
         case .people:
@@ -72,7 +72,7 @@ extension SwapiViewModel {
             listContent = result.results.compactMap { $0.name }
         }
     }
-    
+
     private func fetchGQLContent(_ type: StarWarsCharacters, _ fetchState: ContentFetchState = .cacheHitOrLoad) {
         disablePagination = false
         switch type {

@@ -21,7 +21,6 @@ struct People: Codable {
     let films: [String]
     let gender: String
     let haircolor: String
-    
     enum CodingKeys: String, CodingKey {
         case name = "name"
         case birthyear = "birth_year"
@@ -36,7 +35,6 @@ struct Film: Codable {
     let name: String
     let openingCrawl: String
     let characters: [String]
-    
     enum CodingKeys: String, CodingKey {
         case name = "title"
         case openingCrawl = "opening_crawl"
@@ -48,12 +46,6 @@ struct Planet: Codable {
     let name: String
     let residents: [String]
     let films: [String]
-    
-    enum CodingKeys: String, CodingKey {
-        case name = "name"
-        case residents = "residents"
-        case films = "films"
-    }
 }
 
 struct Species: Codable {
@@ -64,7 +56,6 @@ struct Species: Codable {
     let skinColors: String
     let eyeColors: String
     let language: String
-    
     enum CodingKeys: String, CodingKey {
         case name = "name"
         case classification = "classification"
@@ -84,7 +75,7 @@ struct Starship: Codable {
     let pilots: [String]
     let films: [String]
     let starshipClass: String
-    
+
     enum CodingKeys: String, CodingKey {
         case name = "name"
         case model = "model"
@@ -94,7 +85,6 @@ struct Starship: Codable {
         case films = "films"
         case starshipClass = "starship_class"
     }
-        
 }
 
 struct Vehicle: Codable {
@@ -105,7 +95,6 @@ struct Vehicle: Codable {
     let pilots: [String]
     let films: [String]
     let vehicleClass: String
-    
     enum CodingKeys: String, CodingKey {
         case name = "name"
         case model = "model"
@@ -115,5 +104,4 @@ struct Vehicle: Codable {
         case films = "films"
         case vehicleClass = "vehicle_class"
     }
-        
 }

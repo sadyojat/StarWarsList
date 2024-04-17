@@ -13,14 +13,13 @@ class AllPeopleModel: ObservableObject {
     private(set) var people: [AllPeople.Person]? {
         didSet {
             if let people {
-                names = people.compactMap{$0.name}
+                names = people.compactMap { $0.name }
             }
         }
     }
     private(set) var pageInfo: AllPeople.PageInfo?
     private(set) var totalCount: Int?
-    @Published private(set) var names: [String] = []       
-    
+    @Published private(set) var names: [String] = []
     func fetch(_ fetchState: ContentFetchState = .cacheHitOrLoad) {
         var queryHeader = AllQueryHeader()
         switch fetchState {

@@ -25,7 +25,7 @@ enum StarWarsCharacters: SwapiRestConformance, CaseIterable {
     case species
     case starships
     case vehicles
-    
+
     var restURL: String {
         switch self {
         case .films: "https://swapi.dev/api/films/"
@@ -36,7 +36,7 @@ enum StarWarsCharacters: SwapiRestConformance, CaseIterable {
         case .vehicles: "https://swapi.dev/api/vehicles/"
         }
     }
-    
+
     var title: String {
         switch self {
         case .films: "Films"
